@@ -11,6 +11,7 @@ class Answers extends Model
     public $table='answers';
     protected $fillable=[
         'question_id',
-        'answer'
+        'answer',
+        'uuid'
     ];
 }

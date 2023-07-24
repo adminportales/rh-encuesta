@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Answers;
 use App\Models\Questions;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Str;
 
 
 
@@ -26,12 +26,15 @@ class Respuesta extends Controller
 
 
     public function store(Request $request)
-    {            
+    {          
+        $uuid =  Str::uuid();
+        
         $respuestas = $request->input('question_id');
         foreach ($respuestas as $preguntaId => $respuesta) 
         {            
-            $respuestaString = implode(' ', $respuesta);            
+            $respuestaString = implode(',', $respuesta);            
             $respuestaModel = new Answers();
+            $respuestaModel->uuid =$uuid;
             $respuestaModel->question_id = $preguntaId;
             $respuestaModel->answer = $respuestaString;            
             $respuestaModel->save();
