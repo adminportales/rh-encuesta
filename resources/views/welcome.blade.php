@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        
-        <link rel="stylesheet" href="sweetalert2.min.css">
+
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <title>EVALUACIÓN CLIMA LABORAL</title>
 </head>
 
@@ -37,7 +37,7 @@
             <div class="col-md-9">
                 <h1 class="">EVALUACIÓN CLIMA LABORAL 2023</h1>
             </div>
-        </div>            
+        </div>
         <div id="introduccion">
             <section class="bg-white p-4 rounded shadow-lg">
                 <p class="fw-bold">
@@ -72,41 +72,37 @@
                     $opciones = json_decode($pregunta->options);
                 @endphp
                 @switch($pregunta->type)
-                    @case('Titulo')
-                        <div class="card mb-3 text-center">
-                            <div class="card-header bg-warning fw-bold">
+                   
+
+                    @case('Unica')
+                        <div class="card mb-3">
+                            <div id="pregunta" class="card-header bg-info fw-bold">
                                 {{ $pregunta->question }}
+                            </div>
+                            <div class="card-title">
+                                <div class="form-check">
+                                    @if ($opciones !== null)
+                                        <div class="container">
+                                            <div class="row">
+                                                @foreach ($opciones as $opcion)
+                                                    <div class="col-lg-3 col-md-4 col-sm-6">
+                                                        <label>
+                                                            <input class="mt-3" type="radio"
+                                                                name="question_id[{{ $pregunta->id }}][]"
+                                                                value="{{ $opcion }}" required>
+                                                            {{ $opcion }}
+                                                        </label>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    @endif
+                                </div>
+
                             </div>
                         </div>
                     @break
 
-                    @case('Unica')
-                    <div class="card mb-3">
-                        <div id="pregunta" class="card-header bg-info fw-bold">
-                            {{ $pregunta->question }}
-                        </div>
-                        <div class="card-title">
-                            <div class="form-check">
-                                @if ($opciones !== null)
-                                    <div class="container">
-                                        <div class="row">
-                                            @foreach ($opciones as $opcion)
-                                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                                    <label>
-                                                        <input class="mt-3" type="radio" name="question_id[{{ $pregunta->id }}][]"
-                                                            value="{{ $opcion }}" required>
-                                                        {{ $opcion }}
-                                                    </label>                                                   
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                    </div>
-                                @endif
-                            </div>
-                           
-                        </div>
-                    </div>                    
-                    @break
                     @case('Multiple')
                         <div class="card mb-3 ">
                             <div id="pregunta" class="card-header bg-info fw-bold">
@@ -115,25 +111,28 @@
                             <div class="card-title">
                                 <div class="form-check">
                                     @if ($opciones !== null)
-                                <div class="container">
-                                    <div class="row">
-                                        @foreach ($opciones as $opcion)
-                                        <div class="col-lg-3 col-md-4 col-sm-6">
-                                            <label>
-                                                <input class="mt-3" type="checkbox" name="question_id[{{ $pregunta->id }}][]"
-                                                value="{{ $opcion }}" onclick="limitarCasillas(this)" data-question-id="{{ $pregunta->id }}">
-                                                {{ $opcion }}
-                                            </label><br>
-                                    </div>
-                                        @endforeach
-                                    </div>
-                                </div>
+                                        <div class="container">
+                                            <div class="row">
+                                                @foreach ($opciones as $opcion)
+                                                    <div class="col-lg-3 col-md-4 col-sm-6">
+                                                        <label>
+                                                            <input class="mt-3" type="checkbox"
+                                                                name="question_id[{{ $pregunta->id }}][]"
+                                                                value="{{ $opcion }}" onclick="limitarCasillas(this)"
+                                                                data-question-id="{{ $pregunta->id }}">
+                                                            {{ $opcion }}
+                                                        </label><br>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
                                     @else
                                     @endif
                                 </div>
                             </div>
                         </div>
                     @break
+
                     @case('Libre')
                         <div class="card mb-3">
                             <div class="card-header bg-info fw-bold">
@@ -144,7 +143,9 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-lg-11">
-                                                <input class="mt-4 form-control rounded" type="text"name="question_id[{{ $pregunta->id }}][]" placeholder="Escribe tu respuesta" required>
+                                                <input class="mt-4 form-control rounded"
+                                                    type="text"name="question_id[{{ $pregunta->id }}][]"
+                                                    placeholder="Escribe tu respuesta" required>
                                             </div>
                                         </div>
                                     </div>
@@ -152,9 +153,10 @@
                             </div>
                         </div>
                     @break
+
                     @default
-                @endswitch              
-            @endforeach       
+                @endswitch
+            @endforeach
             <button id="btnEnviar" class="btn btn-success" type="submit">Enviar</button>
     </div>
     </form>
@@ -165,32 +167,33 @@
                     BH TRADE MARKET S.A. DE C.V.&copy; 2023
                 </div>
                 <div class="col-md-6 text-end">
-                   
+
                 </div>
             </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
-        </script>
-        <script>
-             function limitarCasillas(checkbox) {
-        // Obtener todas las casillas de verificación en el grupo
-        var checkboxes = document.querySelectorAll('input[name^="question_id[' + checkbox.dataset.questionId + '][]"]');
+    </script>
+    <script>
+        function limitarCasillas(checkbox) {
+            // Obtener todas las casillas de verificación en el grupo
+            var checkboxes = document.querySelectorAll('input[name^="question_id[' + checkbox.dataset.questionId + '][]"]');
 
-        // Contar las casillas seleccionadas
-        var seleccionadas = 0;
-        for (var i = 0; i < checkboxes.length; i++) {
-            if (checkboxes[i].checked) {
-                seleccionadas++;
+            // Contar las casillas seleccionadas
+            var seleccionadas = 0;
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    seleccionadas++;
+                }
+            }
+
+            // Permitir hasta dos casillas seleccionadas
+            if (seleccionadas > 2) {
+                checkbox.checked = false; // Desmarcar la casilla que se acaba de marcar
             }
         }
-
-        // Permitir hasta dos casillas seleccionadas
-        if (seleccionadas > 2) {
-            checkbox.checked = false; // Desmarcar la casilla que se acaba de marcar
-        }
-    }
-        </script>
+    </script>
 </body>
+
 </html>

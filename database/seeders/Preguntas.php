@@ -16,14 +16,7 @@ class Preguntas extends Seeder
 
 
 
-        DB::table('questions')->insert(
-            [
-                'question' => 'INFORMACIÓN DE PERSONAL',
-                'type'=>'Titulo',
-                'options' =>''
-            ]
-        );
-
+       
 
         DB::table('questions')->insert(
             [
@@ -75,14 +68,7 @@ class Preguntas extends Seeder
             ]
         );
 
-        DB::table('questions')->insert(
-            [
-                'question' => 'EXPERIENCIA EN EL TRABAJO',
-                'type'=>'Titulo',
-                'options' =>''
-            ]
-        );
-
+      
 
 
         DB::table('questions')->insert(
@@ -214,8 +200,10 @@ class Preguntas extends Seeder
                 'options' =>json_encode(['Siempre',
                 'Casi siempre',
                 'Algunas veces',
-                'Casi nunca 
-                '])
+                'Casi nunca ',
+                'Nunca'
+
+                ])
             ]
         );
 
@@ -226,7 +214,9 @@ class Preguntas extends Seeder
                 'options'=>json_encode(['Siempre',
                 'Casi siempre',
                 'Algunas veces',
-                'Casi nunca '])
+                'Casi nunca ',
+                'Nunca'
+                ])
             ]
         );
 
@@ -267,14 +257,7 @@ class Preguntas extends Seeder
         );
 
 
-        DB::table('questions')->insert(
-            [
-                'question' => 'RELACIÓN DE PARES Y LÍNEA DE MANDO ',
-                'type'=>'Titulo',
-                'options' =>''
-            ]
-        );
-
+       
 
         DB::table('questions')->insert(
             [
@@ -399,14 +382,7 @@ class Preguntas extends Seeder
             ]
         );
 
-        DB::table('questions')->insert(
-            [
-                'question' => 'ETICA Y COMPORTAMIENTO',
-                'type'=>'Titulo',
-                'options'=>''
-            ]
-        );
-
+      
         DB::table('questions')->insert(
             [
                 'question' => '¿Conoces la misión y visión de BH TRADE MARKET?',
