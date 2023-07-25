@@ -12,7 +12,7 @@ class Tm57Controller extends Controller
 {
     public function index()
     {   
-        $preguntas = Questions::all();
+        $preguntas = Questions::all()->where('company','TM57');
         return view('tm57.tm57',compact('preguntas'));
     }
 

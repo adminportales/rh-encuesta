@@ -16,6 +16,7 @@ return new class extends Migration
           
             $table->string('question');
             $table->string('type');
+            $table->string('company');
             $table->string('options')->nullable();
             $table->timestamps();
         });

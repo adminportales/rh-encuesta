@@ -12,7 +12,7 @@ class PromolifeController extends Controller
     
     public function index()
         {
-            $preguntas = Questions::all();
+            $preguntas = Questions::all()->where('company','PROMO LIFE');
             return view('promolife.promo',compact('preguntas'));
         }
         

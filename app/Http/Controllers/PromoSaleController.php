@@ -13,7 +13,7 @@ class PromoSaleController extends Controller
     
     public function index()
     {
-        $preguntas = Questions::all();
+        $preguntas = Questions::all()->where('company','PROMO SALE');
         return view('promo_sale.promo_sale',compact('preguntas'));
     }
 

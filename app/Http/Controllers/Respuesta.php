@@ -15,8 +15,7 @@ class Respuesta extends Controller
     function index()
     {
        
-        $preguntas = Questions::all();
-      
+        $preguntas = Questions::all()->where('company','BH TRADE MARKET ');
         return view('welcome', compact('preguntas'));
     }
 
