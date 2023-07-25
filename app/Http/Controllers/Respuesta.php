@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 
 class Respuesta extends Controller
 {
-    //
+    //vistas de las encuestas
     function index()
     {
        
@@ -19,6 +19,9 @@ class Respuesta extends Controller
       
         return view('welcome', compact('preguntas'));
     }
+
+
+
 
     function finish()
      {
@@ -60,7 +63,44 @@ class Respuesta extends Controller
           $Resultado_tiempo[]=$conteo;
         }
 
-        return view('Estadisticas.estadisticas',compact('Resultado','edades','areas','Resultado_area','tiempo','Resultado_tiempo'));
+        //5ta pregunta
+        $empresa=[
+          'BH México',
+          'Bh Cancún '
+        ];
+        foreach($empresa as $empresas){
+          $conteo=Answers::where('answer',$empresas)->count();
+          $Resultado_empresa[]=$conteo;
+        }
+
+        //6ta pregunta
+        $opciones= [
+          'Siempre',
+          'Casi siempre',
+          'Algunas veces',
+          'Casi nunca ',
+          'Nunca'
+        ];
+        foreach($opciones as $opcion){
+          $conteo=Answers::where('question_id',6)->where('answer',$opcion)->count();
+          $Resultado_opcion[]=$conteo;
+        }
+
+        //7ta pregunta
+        $gustar=['Compañeros de trabajo',
+        'Instalaciones',
+        'Liderazgo',
+        'Tareas que realiza',
+        'Gratificaciones/ pagos',
+      ];
+      foreach($gustar as $gustar){
+        $conteo=Answers::where('answer',$gustar)->count();
+        $Resultado_gustar[]=$conteo;
+      }
+
+        return view('Estadisticas.estadisticas',compact(
+          'Resultado','edades','areas','Resultado_area','tiempo','Resultado_tiempo','empresa','Resultado_empresa'
+        ,'opciones','Resultado_opcion','gustar','Resultado_gustar'));
       }
 
 
@@ -75,7 +115,8 @@ class Respuesta extends Controller
             $respuestaModel = new Answers();
             $respuestaModel->uuid =$uuid;
             $respuestaModel->question_id = $preguntaId;
-            $respuestaModel->answer = $respuestaString;            
+            $respuestaModel->answer = $respuestaString; 
+            $respuestaModel->company='BH-BH TRADE MARKET';
             $respuestaModel->save();
         }                
         return redirect()->route('encuesta.fin');

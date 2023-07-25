@@ -16,21 +16,21 @@
     }
 </style>
 <body class="antialiased">
-    <header>
+    {{-- <header>
         <nav class="navbar  bg-body-tertiary" style="background-color: rgb(181, 234, 248);">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="{{ asset('img/bhtrade.png') }}" alt="Logo" width="30" height="24"
-                        class="d-inline-block align-text-top">
-                    BH TRADE MARKET S.A. DE C.V.
-                </a>
+                    {{-- <img src="{{ asset('img/bhtrade.png') }}" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top"> --}}
+                    
+                {{-- </a>
             </div>
         </nav>
-    </header>
+    </header>  --}}
     <div class="container mt-4">
         <div class="row ">
             <div class="col-md-2">
-                <img src="{{ asset('img/bhtrade.png') }}" alt="" width="80" height="80">
+                {{-- <img src="{{ asset('img/bhtrade.png') }}" alt="" width="80" height="80"> --}}
             </div>
             <div class="col-md-9">
                 <h1 class="">EVALUACIÓN CLIMA LABORAL 2023</h1>

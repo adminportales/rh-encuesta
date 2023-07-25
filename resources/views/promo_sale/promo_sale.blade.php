@@ -22,18 +22,18 @@
         <nav class="navbar  bg-body-tertiary" style="background-color: rgb(181, 234, 248);">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="{{ asset('img/bhtrade.png') }}" alt="Logo" width="30" height="24"
-                        class="d-inline-block align-text-top">
-                    BH TRADE MARKET S.A. DE C.V.
+                    {{-- <img src="{{ asset('img/promolife.png') }}" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top"> --}}
+                    PROMO ZALE 
                 </a>
             </div>
         </nav>
     </header>
     <div class="container mt-4">
         <div class="row ">
-            <div class="col-md-2">
-                <img src="{{ asset('img/bhtrade.png') }}" alt="" width="80" height="80">
-            </div>
+            {{-- <div class="col-md-2">
+                <img src="{{ asset('img/promolife.png') }}" alt="" width="100" height="80">
+            </div> --}}
             <div class="col-md-9">
                 <h1 class="">EVALUACIÓN CLIMA LABORAL 2023</h1>
             </div>
@@ -41,14 +41,14 @@
         <div id="introduccion">
             <section class="bg-white p-4 rounded shadow-lg">
                 <p class="fw-bold">
-                    ¡Bienvenido(a) estimado(a) colaborador(a) de BH TRADE MARKET S.A. DE C.V.!
+                    ¡Bienvenido(a) estimado(a) colaborador(a) de PROMO ZALE!
                     El siguiente cuestionario tiene como objetivo conocer que tan satisfechos (as) se sienten nuestros
                     (as) colaboradores(as) en su posición actual dentro de esta empresa y que Dirección General pueda
                     conocer el sentir y la opinión cada uno de ustedes para tomar decisiones que ayuden al desarrollo
                     personal y profesional de sus equipos de trabajo.
                     Pedimos de tu valioso apoyo con tu respuesta de la manera más honesta y objetiva, recordando que no
                     existen respuestas buenas o malas, ya que buscamos mejorar de manera continua las condiciones
-                    laborales de BH TRADE MARKET.
+                    laborales de PROMO ZALE.
                     Este cuestionario será respondido de manera anónima y toda la información recopilada será utilizada
                     con fines estadísticos.
                     Te recomendamos leer cuidadosamente cada pregunta y no dejar ninguna pregunta sin responder.
@@ -65,7 +65,7 @@
         @endif
         <hr>
 
-        <form action="{{ route('encuesta.save') }}" method="POST">
+        <form action="{{ route('promosale.save') }}" method="POST">
             @csrf
             @foreach ($preguntas as $pregunta)
                 @php
@@ -164,7 +164,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-muted">
-                    BH TRADE MARKET S.A. DE C.V.&copy; 2023
+                    PROMO ZALE S.A. DE C.V.&copy; 2023
                 </div>
                 <div class="col-md-6 text-end">
 

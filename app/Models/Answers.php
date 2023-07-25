@@ -12,6 +12,7 @@ class Answers extends Model
     protected $fillable=[
         'question_id',
         'answer',
-        'uuid'
+        'uuid',
+        'company'
     ];
 }

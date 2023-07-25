@@ -70,19 +70,31 @@
                     <div class="card shadow card-total">
                         <h6 class="text-center">A qué empresa perteneces</h6>
                     </div>
-                    <canvas id="Prioridad" height="200"></canvas>
+                    <canvas id="empresa" height="200"></canvas>
                 </div>
                 <div class="col ">
                     <div class="card shadow card-total">
-                        <h6 class="text-center">Puntuaciones</h6>
+                        <h6 class="text-center">Al ingresar a trabajar en BH TRADE MARKET o cuando has cambiado de posición ¿Fue difícil adaptarte?</h6>
                     </div>
-                    <canvas id="Stars" height="200"></canvas>
+                    <canvas id="adaptarse" height="200"></canvas>
                 </div>
                 <div class="col">
                     <div class="card shadow card-total">
-                        <h6 class="text-center">Especiales</h6>
+                        <h6 class="text-center">¿Qué es lo que más te gusta de trabajar en BH TRADE MARKET? (Puedes seleccionar dos opciones)</h6>
                     </div>
-                    <canvas id="especiales" height="200"></canvas>
+                    <canvas id="gustar" height="200"></canvas>
+                </div>
+                <div class="col">
+                    <div class="card shadow card-total">
+                        <h6 class="text-center">¿Qué es lo que menos te gusta de trabajar en la organización?  (puedes seleccionar dos opciones)</h6>
+                    </div>
+                    <canvas id="gustar" height="200"></canvas>
+                </div>
+                <div class="col">
+                    <div class="card shadow card-total">
+                        <h6 class="text-center">¿Qué es lo que menos te gusta de trabajar en la organización?  (puedes seleccionar dos opciones)</h6>
+                    </div>
+                    <canvas id="gustar" height="200"></canvas>
                 </div>
             </div>
         </div>
@@ -186,6 +198,99 @@
             });
     });
 
+    document.addEventListener('DOMContentLoaded', function() {
+        // Obtén el contexto del canvas
+        var ctx = document.getElementById('empresa').getContext('2d');
+
+            var nombres=@json($empresa);
+            var datos = @json($Resultado_empresa);
+
+            var backgroundColors = [];
+            var borderColors = [];
+
+            for (var i = 0; i < nombres.length; i++) {
+                var colorIndex = i % 5;
+                backgroundColors.push(['#00539C', '#EEA47F', '#EE7F7F', '#006EAD', '#F5C2A8'][colorIndex]);
+                borderColors.push(['#00539C', '#EEA47F', '#EE7F7F', '#006EAD', '#F5C2A8', '#FFADAD'][colorIndex]);
+            }
+
+            var chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels:nombres,
+                    datasets: [{
+                        label: 'Tiempo',
+                        data: datos,
+                        backgroundColor:backgroundColors,
+                        borderColor: borderColors,
+                        borderWidth: 1
+                    }]
+                },
+                options: {}
+            });
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        // Obtén el contexto del canvas
+        var ctx = document.getElementById('adaptarse').getContext('2d');
+
+            var nombres=@json($opciones);
+            var datos = @json($Resultado_opcion);
+
+            var backgroundColors = [];
+            var borderColors = [];
+
+            for (var i = 0; i < nombres.length; i++) {
+                var colorIndex = i % 5;
+                backgroundColors.push(['#00539C', '#EEA47F', '#EE7F7F', '#006EAD', '#F5C2A8'][colorIndex]);
+                borderColors.push(['#00539C', '#EEA47F', '#EE7F7F', '#006EAD', '#F5C2A8', '#FFADAD'][colorIndex]);
+            }
+
+            var chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels:nombres,
+                    datasets: [{
+                        label: 'Tiempo',
+                        data: datos,
+                        backgroundColor:backgroundColors,
+                        borderColor: borderColors,
+                        borderWidth: 1
+                    }]
+                },
+                options: {}
+            });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Obtén el contexto del canvas
+        var ctx = document.getElementById('gustar').getContext('2d');
+
+            var nombres=@json($gustar);
+            var datos = @json($Resultado_gustar);
+            var backgroundColors = [];
+            var borderColors = [];
+
+            for (var i = 0; i < nombres.length; i++) {
+                var colorIndex = i % 5;
+                backgroundColors.push(['#00539C', '#EEA47F', '#EE7F7F', '#006EAD', '#F5C2A8'][colorIndex]);
+                borderColors.push(['#00539C', '#EEA47F', '#EE7F7F', '#006EAD', '#F5C2A8', '#FFADAD'][colorIndex]);
+            }
+
+            var chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels:nombres,
+                    datasets: [{
+                        label: 'Tiempo',
+                        data: datos,
+                        backgroundColor:backgroundColors,
+                        borderColor: borderColors,
+                        borderWidth: 1
+                    }]
+                },
+                options: {}
+            });
+    });
     </script>
 
 </body>
