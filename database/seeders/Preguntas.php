@@ -154,7 +154,8 @@ class Preguntas extends Seeder
             [
                 'question' => '¿Las actividades que desempeñas en tu puesto son de tu agrado?',
                 'type'=>'Unica',
-                'options'=>json_encode(['Casi siempre',
+                'options'=>json_encode(['Siempre',
+                'Casi siempre',
                 'Algunas veces',
                 'Casi nunca ',
                 'Nunca']),
@@ -630,7 +631,8 @@ class Preguntas extends Seeder
             [
                 'question' => '¿Las actividades que desempeñas en tu puesto son de tu agrado?',
                 'type'=>'Unica',
-                'options'=>json_encode(['Casi siempre',
+                'options'=>json_encode(['Siempre'
+                ,'Casi siempre',
                 'Algunas veces',
                 'Casi nunca ',
                 'Nunca']),
@@ -1082,7 +1084,8 @@ class Preguntas extends Seeder
             [
                 'question' => '¿Las actividades que desempeñas en tu puesto son de tu agrado?',
                 'type'=>'Unica',
-                'options'=>json_encode(['Casi siempre',
+                'options'=>json_encode(['Siempre'
+                ,'Casi siempre',
                 'Algunas veces',
                 'Casi nunca ',
                 'Nunca']),
@@ -1408,7 +1411,7 @@ class Preguntas extends Seeder
                 'question' => '¿A qué rango de edad perteneces?',
                 'type'=>'Unica',
                 'options' => json_encode(['18-25', '26-35', '36-45', '46-55', '56-65', '65+']),
-                'company'=>'TM57'
+                'company'=>'Trade Market 57'
             ]
         );
 
@@ -1417,7 +1420,7 @@ class Preguntas extends Seeder
                 'question' => '¿Cuál es tu genero?',
                 'type'=>'Libre',
                 'options' => 'Respuesta Libre'
-                ,'company'=>'TM57'
+                ,'company'=>'Trade Market 57'
             ]
         );
 
@@ -1425,7 +1428,7 @@ class Preguntas extends Seeder
             [
                 'question' => 'Àrea en la que te desenvuelves actualmente:', 
                 'options' => json_encode(['Administración', 'Almacén', 'Compras', 'Dirección', 'Diseño', 'Importaciones', 'Logística', 'Marketing', 'Operaciones', ' Recursos Humanos', 'Tecnología', 'Ventas']),
-                'type'=>'Unica','company'=>'TM57'
+                'type'=>'Unica','company'=>'Trade Market 57'
             ]
         );
 
@@ -1441,7 +1444,7 @@ class Preguntas extends Seeder
                     '5 a 6 años', 'Mas de 7 años
                 '
                 ])
-                ,'company'=>'TM57'
+                ,'company'=>'Trade Market 57'
             ]
             
         );
@@ -1462,7 +1465,7 @@ class Preguntas extends Seeder
 
         DB::table('questions')->insert(
             [
-                'question' => 'Al ingresar a trabajar en TM57 o cuando has cambiado de posición ¿Fue difícil adaptarte?',
+                'question' => 'Al ingresar a trabajar en Trade Market 57 o cuando has cambiado de posición ¿Fue difícil adaptarte?',
                 'type'=>'Unica',
                 'options' =>json_encode( [
                     'Siempre',
@@ -1470,21 +1473,21 @@ class Preguntas extends Seeder
                     'Algunas veces',
                     'Casi nunca ',
                     'Nunca'
-                ]),'company'=>'TM57'
+                ]),'company'=>'Trade Market 57'
             ]
         );
 
 
         DB::table('questions')->insert(
             [
-                'question' => '¿Qué es lo que más te gusta de trabajar en TM57? (Puedes seleccionar dos opciones)',
+                'question' => '¿Qué es lo que más te gusta de trabajar en Trade Market 57? (Puedes seleccionar dos opciones)',
                 'type'=>'Multiple',
                 'options'=>json_encode(['Compañeros de trabajo',
                 'Instalaciones',
                 'Liderazgo',
                 'Tareas que realiza',
                 'Gratificaciones/ pagos',
-                ]),'company'=>'TM57'
+                ]),'company'=>'Trade Market 57'
 
             ]
         );
@@ -1498,19 +1501,19 @@ class Preguntas extends Seeder
                 'Instalaciones',
                 'Liderazgo',
                 'Tareas que realiza',
-                'Gratificaciones/ pagos']),'company'=>'TM57'
+                'Gratificaciones/ pagos']),'company'=>'Trade Market 57'
                 
             ]
         );
         DB::table('questions')->insert(
             [
-                'question' => '¿Cómo calificarías tu experiencia trabajando dentro de TM57? (Tomando en cuenta que en tu trabajo pasas la mayor parte de tu vida, aprendes cosas nuevas y te llevas experiencias para toda la vida)',
+                'question' => '¿Cómo calificarías tu experiencia trabajando dentro de Trade Market 57? (Tomando en cuenta que en tu trabajo pasas la mayor parte de tu vida, aprendes cosas nuevas y te llevas experiencias para toda la vida)',
                 'type'=>'Unica',
                 'options'=>json_encode(['Muy buena ',
                 'Mala ',
                 'Regular ',
                 'Buena ',
-                'Excelente']),'company'=>'TM57'
+                'Excelente']),'company'=>'Trade Market 57'
             ]
         );
         DB::table('questions')->insert(
@@ -1522,7 +1525,7 @@ class Preguntas extends Seeder
                 'Algunas veces',
                 'Casi nunca ',
                 'Nunca'
-                ]),'company'=>'TM57'
+                ]),'company'=>'Trade Market 57'
 
             ]
         );
@@ -1530,23 +1533,24 @@ class Preguntas extends Seeder
             [
                 'question' => '¿Las actividades que desempeñas en tu puesto son de tu agrado?',
                 'type'=>'Unica',
-                'options'=>json_encode(['Casi siempre',
+                'options'=>json_encode(['Siempre',
+                'Casi siempre',
                 'Algunas veces',
                 'Casi nunca ',
-                'Nunca']),'company'=>'TM57'
+                'Nunca']),'company'=>'Trade Market 57'
             ]
         );
 
         DB::table('questions')->insert(
             [
-                'question' => '¿Crees que TM57 te brinda las herramientas necesarias para desenvolver tus actividades con facilidad?',
+                'question' => '¿Crees que Trade Market 57 te brinda las herramientas necesarias para desenvolver tus actividades con facilidad?',
                 'type'=>'Unica',
                 'options'=>json_encode(['Nada de acuerdo',
                 'Poco de acuerdo ',
                 'Moderadamente de acuerdo',
                 'Bastante de acuerdo',
                 'Totalmente de acuerdo
-                ']),'company'=>'TM57'
+                ']),'company'=>'Trade Market 57'
             ]
         );
 
@@ -1558,33 +1562,33 @@ class Preguntas extends Seeder
                 'Malas',
                 'Regulares',
                 'Buenas ',
-                'Excelentes']),'company'=>'TM57'
+                'Excelentes']),'company'=>'Trade Market 57'
             ]
         );
 
         DB::table('questions')->insert(
             [
-                'question' => '¿Qué te gustaría mejorar en cuanto a lideres, herramientas e instalaciones de TM57?',
+                'question' => '¿Qué te gustaría mejorar en cuanto a lideres, herramientas e instalaciones de Trade Market 57?',
                 'type'=>'Libre',
-                'options' => '' ,'company'=>'TM57'              
+                'options' => '' ,'company'=>'Trade Market 57'              
             ]
         );
 
         DB::table('questions')->insert(
             [
-                'question' => '¿Crees queTM57 te brinda oportunidades de progresar, crecer y desarrollarte profesionalmente',
+                'question' => '¿Crees que Trade Market 57 te brinda oportunidades de progresar, crecer y desarrollarte profesionalmente',
                 'type'=>'Unica',
                 'options'=>json_encode(['Siempre',
                 'Casi siempre',
                 'Algunas veces',
                 'Casi nunca ',
-                'Nunca']),'company'=>'TM57'
+                'Nunca']),'company'=>'Trade Market 57'
             ]
         );
 
         DB::table('questions')->insert(
             [
-                'question' => '¿Piensas que TM57 considera a cada colaborador un factor clave para el éxito de la organización?',
+                'question' => '¿Piensas que Trade Market 57 considera a cada colaborador un factor clave para el éxito de la organización?',
                 'type'=>'Unica',
                 'options' =>json_encode(['Siempre',
                 'Casi siempre',
@@ -1592,7 +1596,7 @@ class Preguntas extends Seeder
                 'Casi nunca ',
                 'Nunca'
 
-                ]),'company'=>'TM57'
+                ]),'company'=>'Trade Market 57'
             ]
         );
 
@@ -1605,7 +1609,7 @@ class Preguntas extends Seeder
                 'Algunas veces',
                 'Casi nunca ',
                 'Nunca'
-                ]),'company'=>'TM57'
+                ]),'company'=>'Trade Market 57'
             ]
         );
 
@@ -1618,7 +1622,7 @@ class Preguntas extends Seeder
                 'Moderadamente de acuerdo',
                 'Bastante de acuerdo',
                 'Totalmente de acuerdo
-                ']),'company'=>'TM57'
+                ']),'company'=>'Trade Market 57'
             ]
         );
 
@@ -1630,18 +1634,18 @@ class Preguntas extends Seeder
                     'Si',
                 'No',
                 'No se '
-                ]),'company'=>'TM57'
+                ]),'company'=>'Trade Market 57'
             ]
         );
 
         DB::table('questions')->insert(
             [
-                'question' => '¿Te ves a ti mismo trabajando en TM57 dentro de?',
+                'question' => '¿Te ves a ti mismo trabajando en Trade Market 57 dentro de?',
                 'type'=>'Unica',
                 'options' =>json_encode(['Menos de 1 año',
                 '1 año',
                 '2 años ',
-                'Mas de 2 años']),'company'=>'TM57'
+                'Mas de 2 años']),'company'=>'Trade Market 57'
             ]
         );
 
@@ -1657,7 +1661,7 @@ class Preguntas extends Seeder
                 'Regular',
                 'Buena',
                 'Excelente'
-                ]),'company'=>'TM57'
+                ]),'company'=>'Trade Market 57'
             ]
         );
 
@@ -1670,7 +1674,7 @@ class Preguntas extends Seeder
                 'Regular',
                 'Buena',
                 'Excelente'
-                ]),'company'=>'TM57'
+                ]),'company'=>'Trade Market 57'
             ]
         );
 
@@ -1683,7 +1687,7 @@ class Preguntas extends Seeder
                 'Algunas veces ',
                 'Casi nunca ',
                 'Nunca'
-                ]),'company'=>'TM57'
+                ]),'company'=>'Trade Market 57'
             ]
         );
 
@@ -1696,7 +1700,7 @@ class Preguntas extends Seeder
                 'Moderadamente motivante ',
                 'Muy motivante ',
                 'Extremadamente motivante
-                ']),'company'=>'TM57'
+                ']),'company'=>'Trade Market 57'
             ]
         );
 
@@ -1709,7 +1713,7 @@ class Preguntas extends Seeder
                 'Algunas veces ',
                 'Casi nunca ',
                 'Nunca
-                ']),'company'=>'TM57'
+                ']),'company'=>'Trade Market 57'
             ]
         );
 
@@ -1721,7 +1725,7 @@ class Preguntas extends Seeder
                 'Casi Nunca ',
                 'Algunas veces',
                 'Casi siempre ',
-                'Siempre']),'company'=>'TM57'
+                'Siempre']),'company'=>'Trade Market 57'
                 
             ]
         );
@@ -1734,7 +1738,7 @@ class Preguntas extends Seeder
                 'Mala',
                 'Regular',
                 'Buena',
-                'Excelente'] )  ,'company'=>'TM57'             
+                'Excelente'] )  ,'company'=>'Trade Market 57'             
             ]
         );
 
@@ -1747,66 +1751,66 @@ class Preguntas extends Seeder
                 'Algunas veces',
                 'Casi siempre ',
                 'Siempre'
-                ]),'company'=>'TM57'
+                ]),'company'=>'Trade Market 57'
             ]
         );
 
         DB::table('questions')->insert(
             [
-                'question' => '¿Te sientes escuchado por la Dirección de TM57? ',
+                'question' => '¿Te sientes escuchado por la Dirección de Trade Market 57? ',
                 'type'=>'Unica',
                 'options'=>json_encode(['Nunca',
                 'Casi Nunca ',
                 'Algunas veces',
                 'Casi siempre ',
                 'Siempre'
-                ]),'company'=>'TM57'
+                ]),'company'=>'Trade Market 57'
             ]
         );
         DB::table('questions')->insert(
             [
                 'question' => '¿Has tenido algún problema con tus compañeros de trabajo?',
                 'type'=>'Unica',
-                'options'=>json_encode(['Si', 'No ']),'company'=>'TM57'
+                'options'=>json_encode(['Si', 'No ']),'company'=>'Trade Market 57'
             ]
         );
 
       
         DB::table('questions')->insert(
             [
-                'question' => '¿Conoces la misión y visión de TM57?',
+                'question' => '¿Conoces la misión y visión de Trade Market 57?',
                 'type'=>'Unica',
                 'options' =>json_encode(['Si ',
                 'No ',
-                'No tenemos']),'company'=>'TM57'
+                'No tenemos']),'company'=>'Trade Market 57'
             ]
         );
         DB::table('questions')->insert(
             [
-                'question' => '¿Conoces el código de ética de TM57?',
+                'question' => '¿Conoces el código de ética de Trade Market 57?',
                 'type'=>'Unica',
                 'options'=>json_encode(['Si ',
                 'No ',
                 'No tenemos'
-                ]),'company'=>'TM57'
+                ]),'company'=>'Trade Market 57'
             ]
         );
         DB::table('questions')->insert(
             [
-                'question' => '¿Conoces los valores organizacionales de TM57?',
+                'question' => '¿Conoces los valores organizacionales de Trade Market 57?',
                 'type'=>'Unica',
                 'options'=>json_encode(['Si',
                 'No ',
-                'No tenemos']),'company'=>'TM57'
+                'No tenemos']),'company'=>'Trade Market 57'
             ]
         );
         DB::table('questions')->insert(
             [
-                'question' => '¿Conoces la línea de denuncias internas de TM57?',
+                'question' => '¿Conoces la línea de denuncias internas de Trade Market 57?',
                 'type'=>'Unica',
                 'options'=>json_encode(['Si', 
                 'No',
-                'No tenemos']),'company'=>'TM57'
+                'No tenemos']),'company'=>'Trade Market 57'
             ]
         );
         DB::table('questions')->insert(
@@ -1814,7 +1818,7 @@ class Preguntas extends Seeder
                 'question' => '¿Crees que se comete algún tipo de injusticia en tu trabajo?',
                 'type'=>'Unica',
                 'options'=>json_encode(['Si', 
-                'No' ]),'company'=>'TM57'
+                'No' ]),'company'=>'Trade Market 57'
             ]
         );
         DB::table('questions')->insert(
@@ -1823,21 +1827,21 @@ class Preguntas extends Seeder
                 'type'=>'Unica',
                 'options'=>json_encode(['Si',
                 'No'
-                ]),'company'=>'TM57'
+                ]),'company'=>'Trade Market 57'
             ]
         );
         DB::table('questions')->insert(
             [
                 'question' => '¿Te gustaría compartirnos la situación de la cual fuiste testigo que vayan en contra de nuestros valores o colaboradores?',
                 'type'=>'Libre',
-                'options'=>'','company'=>'TM57'
+                'options'=>'','company'=>'Trade Market 57'
             ]
         );
         DB::table('questions')->insert(
             [
                 'question' => '¿Te gustaría darnos algún comentario adicional? ',
                 'type'=>'Libre',
-                'options'=>'Respuesta abierta ','company'=>'TM57'
+                'options'=>'Respuesta abierta ','company'=>'Trade Market 57'
             ]   
         );
     }

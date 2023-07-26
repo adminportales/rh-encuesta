@@ -12,7 +12,7 @@ class Tm57Controller extends Controller
 {
     public function index()
     {   
-        $preguntas = Questions::all()->where('company','TM57');
+        $preguntas = Questions::all()->where('company','Trade Market 57');
         return view('tm57.tm57',compact('preguntas'));
     }
 
@@ -28,7 +28,7 @@ class Tm57Controller extends Controller
             $respuestaModel->uuid =$uuid;
             $respuestaModel->question_id = $preguntaId;
             $respuestaModel->answer = $respuestaString; 
-            $respuestaModel->company='TM57';
+            $respuestaModel->company='Trade Market 57';
             $respuestaModel->save();
         }                
         return redirect()->route('encuesta.fin');

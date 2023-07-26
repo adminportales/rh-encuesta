@@ -32,7 +32,7 @@
     <div class="container mt-4">
         <div class="row ">
             <div class="col-md-2">
-                <img src="{{ asset('img/promolife.png') }}" alt="" width="100" height="80">
+                <img src="{{ asset('img/promolife.png') }}" alt="" width="150" height="100">
             </div>
             <div class="col-md-9">
                 <h1 class="">EVALUACIÓN CLIMA LABORAL 2023</h1>

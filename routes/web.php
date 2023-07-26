@@ -35,6 +35,6 @@ Route::post('/promolifesave',[PromolifeController::class,'store'])->name('promo.
 Route::get('/promosale',[PromoSaleController::class,'index'])->name('promosale');
 Route::post('/promosalesave',[PromoSaleController::class,'store'])->name('promosale.save');
 //TM
-Route::get('/tm57',[Tm57Controller::class,'index'])->name('tm57');
-Route::post('/tm57save',[Tm57Controller::class,'store'])->name('tm57.save');
+Route::get('/trademarket57',[Tm57Controller::class,'index'])->name('tm57');
+Route::post('/trademarket57save',[Tm57Controller::class,'store'])->name('tm57.save');
 

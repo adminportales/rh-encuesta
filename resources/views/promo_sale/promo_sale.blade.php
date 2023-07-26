@@ -22,8 +22,8 @@
         <nav class="navbar  bg-body-tertiary" style="background-color: rgb(181, 234, 248);">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    {{-- <img src="{{ asset('img/promolife.png') }}" alt="Logo" width="30" height="24"
-                        class="d-inline-block align-text-top"> --}}
+                    <img src="{{ asset('img/LOGOPROMODREAMS.jpg') }}" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top">
                     PROMO ZALE 
                 </a>
             </div>
@@ -31,9 +31,9 @@
     </header>
     <div class="container mt-4">
         <div class="row ">
-            {{-- <div class="col-md-2">
-                <img src="{{ asset('img/promolife.png') }}" alt="" width="100" height="80">
-            </div> --}}
+            <div class="col-md-2">
+                <img src="{{ asset('img/LOGOPROMODREAMS.jpg') }}" alt="" width="150" height="100">
+            </div>
             <div class="col-md-9">
                 <h1 class="">EVALUACIÓN CLIMA LABORAL 2023</h1>
             </div>
