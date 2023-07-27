@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="sweetalert2.min.css">
+   
     <title>EVALUACIÓN CLIMA LABORAL</title>
 </head>
 
@@ -145,7 +145,7 @@
                                             <div class="col-lg-11">
                                                 <input class="mt-4 form-control rounded"
                                                     type="text"name="question_id[{{ $pregunta->id }}][]"
-                                                    placeholder="Escribe tu respuesta" required>
+                                                    placeholder="Escribe tu respuesta" >
                                             </div>
                                         </div>
                                     </div>
