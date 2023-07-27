@@ -145,7 +145,7 @@
                                             <div class="col-lg-11">
                                                 <input class="mt-4 form-control rounded"
                                                     type="text"name="question_id[{{ $pregunta->id }}][]"
-                                                    placeholder="Escribe tu respuesta" >
+                                                    placeholder="Escribe tu respuesta"  maxlength="255">
                                             </div>
                                         </div>
                                     </div>
