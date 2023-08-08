@@ -21,6 +21,17 @@ class Tm57Controller extends Controller
         $uuid =  Str::uuid();
         
         $respuestas = $request->input('question_id');
+
+        
+        $preguntas=Questions::all();
+
+        $rules = [];
+        foreach ($preguntas as $pregunta) {
+            $rules["question_id.{$pregunta->id}.*"] = 'required|max:255';
+        }
+    
+        $request->validate($rules); 
+
         foreach ($respuestas as $preguntaId => $respuesta) 
         {            
             $respuestaString = implode(',', $respuesta);            

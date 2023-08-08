@@ -9,29 +9,35 @@ use App\Models\Answers;
 
 class PromolifeController extends Controller
 {
-    
-    public function index()
-        {
-            $preguntas = Questions::all()->where('company','PROMO LIFE');
-            return view('promolife.promo',compact('preguntas'));
-        }
-        
-        public function store(Request $request)
-        {          
-            $uuid =  Str::uuid();
-            
-            $respuestas = $request->input('question_id');
-            foreach ($respuestas as $preguntaId => $respuesta) 
-            {            
-                $respuestaString = implode(',', $respuesta);            
-                $respuestaModel = new Answers();
-                $respuestaModel->uuid =$uuid;
-                $respuestaModel->question_id = $preguntaId;
-                $respuestaModel->answer = $respuestaString; 
-                $respuestaModel->company='PROMO LIFE';
-                $respuestaModel->save();
-            }                
-            return redirect()->route('encuesta.fin');
-        }
 
+    public function index()
+    {
+        $preguntas = Questions::all()->where('company');
+       
+        return view('promolife.promo', compact('preguntas'));
     }
+
+    public function store(Request $request)
+    {
+        $uuid =  Str::uuid();
+        $preguntas=Questions::all();
+
+        $rules = [];
+        foreach ($preguntas as $pregunta) {
+            $rules["question_id.{$pregunta->id}.*"] = 'required|max:255';
+        }
+    
+        $request->validate($rules); 
+        $respuestas = $request->input('question_id');
+        foreach ($respuestas as $preguntaId => $respuesta) {
+            $respuestaString = implode(',', $respuesta);
+            $respuestaModel = new Answers();
+            $respuestaModel->uuid = $uuid;
+            $respuestaModel->question_id = $preguntaId;
+            $respuestaModel->answer = $respuestaString;
+            $respuestaModel->company = 'PROMO LIFE';
+            $respuestaModel->save();
+        }
+        return redirect()->route('encuesta.fin');
+    }
+}

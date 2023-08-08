@@ -55,7 +55,6 @@ class Preguntas extends Seeder
                     '5 a 6 años', 'Mas de 7 años'
                 ]),
                 'company'=>'BH TRADE MARKET '
-
                 
             ]
         );
@@ -72,10 +71,7 @@ class Preguntas extends Seeder
 
             ]
         );
-
-      
-
-
+    
         DB::table('questions')->insert(
             [
                 'question' => 'Al ingresar a trabajar en BH TRADE MARKET o cuando has cambiado de posición ¿Fue difícil adaptarte?',
@@ -267,7 +263,7 @@ class Preguntas extends Seeder
                 'company'=>'BH TRADE MARKET '
             ]
         );
-
+        //Aqui
         DB::table('questions')->insert(
             [
                 'question' => '¿Te ves a ti mismo trabajando en BH TRADE MARKET dentro de?',
@@ -367,7 +363,7 @@ class Preguntas extends Seeder
                 
             ]
         );
-
+        //27
         DB::table('questions')->insert(
             [
                 'question' => '¿Cómo es la relación con tu jefe?',
@@ -408,6 +404,7 @@ class Preguntas extends Seeder
             'company'=>'BH TRADE MARKET '
             ]
         );
+        
         DB::table('questions')->insert(
             [
                 'question' => '¿Has tenido algún problema con tus compañeros de trabajo?',
@@ -502,8 +499,9 @@ class Preguntas extends Seeder
             [
                 'question' => '¿A qué rango de edad perteneces?',
                 'type'=>'Unica',
-                'options' => json_encode(['18-25', '26-35', '36-45', '46-55', '56-65', '65+']),                
-                'company'=>'PROMO LIFE '
+                'company'=>'PROMO LIFE',
+                'options' => json_encode(['18-25', '26-35', '36-45', '46-55', '56-65', '65+'])
+                
             ]
         );
 
@@ -541,21 +539,7 @@ class Preguntas extends Seeder
             ]
         );
 
-        // DB::table('questions')->insert(
-        //     [
-        //         'question' => '¿A qué empresa perteneces?',
-        //         'type'=>'Unica',
-        //         'options' =>json_encode([
-        //             'BH México',
-        //             'Bh Cancún '
-        //         ]),
-        //         'company'=>'PROMO LIFE'
-        //     ]
-        // );
-
-      
-
-
+  
         DB::table('questions')->insert(
             [
                 'question' => 'Al ingresar a trabajar en PROMO LIFE o cuando has cambiado de posición ¿Fue difícil adaptarte?',

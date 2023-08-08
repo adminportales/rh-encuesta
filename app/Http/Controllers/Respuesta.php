@@ -9,38 +9,46 @@ use Illuminate\Support\Str;
 
 class Respuesta extends Controller
 {
+   
     //vistas de las encuestas
-    function index()
+    public function index()
     {
-       
-        $preguntas = Questions::all()->where('company','BH TRADE MARKET ');
+        
+        $preguntas = Questions::all()->where('company', 'BH TRADE MARKET ');
         return view('welcome', compact('preguntas'));
     }
 
 
-    function finish()
-     {
-        
+    public function finish()
+    {
+
         return view('finish');
-      }
+    }
 
 
     public function store(Request $request)
-    {          
+    {
+       
+        $respuestas = $request->input('question_id'); 
+        $preguntas=Questions::all();
+
+        $rules = [];
+        foreach ($preguntas as $pregunta) {
+            $rules["question_id.{$pregunta->id}.*"] = 'required|max:255';
+        }
+    
+        $request->validate($rules);       
+
         $uuid =  Str::uuid();
-        
-        $respuestas = $request->input('question_id');
-        foreach ($respuestas as $preguntaId => $respuesta) 
-        {            
-            $respuestaString = implode(',', $respuesta);            
+        foreach ($respuestas as $preguntaId => $respuesta) {
+            $respuestaString = implode(',', $respuesta);
             $respuestaModel = new Answers();
-            $respuestaModel->uuid =$uuid;
+            $respuestaModel->uuid = $uuid;
             $respuestaModel->question_id = $preguntaId;
-            $respuestaModel->answer = $respuestaString; 
-            $respuestaModel->company='BH-BH TRADE MARKET';
+            $respuestaModel->answer = $respuestaString;
+            $respuestaModel->company = 'BH-BH TRADE MARKET';
             $respuestaModel->save();
-        }                
+        }
         return redirect()->route('encuesta.fin');
     }
-
 }

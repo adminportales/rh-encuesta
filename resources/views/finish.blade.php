@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">        
         <link rel="stylesheet" href="sweetalert2.min.css">
-    <title>Encuesta</title>
+    <title>Encuesta enviada</title>
 </head>
 
 <style>
@@ -16,33 +16,38 @@
     }
 </style>
 <body class="antialiased">
-    {{-- <header>
-        <nav class="navbar  bg-body-tertiary" style="background-color: rgb(181, 234, 248);">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    {{-- <img src="{{ asset('img/bhtrade.png') }}" alt="Logo" width="30" height="24"
-                        class="d-inline-block align-text-top"> --}}
-                    
-                {{-- </a>
-            </div>
-        </nav>
-    </header>  --}}
+
     <div class="container mt-4">
-        <div class="row ">
-            <div class="col-md-2">
-                {{-- <img src="{{ asset('img/bhtrade.png') }}" alt="" width="80" height="80"> --}}
-            </div>
-            <div class="col-md-9">
-                <h1 class="">EVALUACIÓN CLIMA LABORAL 2023</h1>
+        <div class="row ">          
+            <div class="col-7 mx-auto col-md-9">
+                <h1 class="text-center">EVALUACIÓN CLIMA LABORAL 2023</h1>
             </div>
         </div>
         <hr>
-        <div class="card shadow rounded-3 card-sm">
+        <div class="col-7 mx-auto card shadow rounded-3">
             <div class="card-body">
-              <h5 class="card-title text-center fs-1">Encuesta enviada correctamente. !Gracias!</h5>                      
+                <div class="row">  
+                    <div class="col d-flex justify-content-center">
+                        <img src="{{asset('img/bhtrade.png') }}" height="50px" width="50px" alt="">
+                    </div>        
+                    <div class="col">
+                        <img src="{{asset('img/LOGOPROMODREAMS.jpg') }}" height="50px" width="50px" alt="">
+                    </div>
+                    <div class="col">
+                        <img src="{{asset('img/promolife.png') }}" height="50px" width="50px" alt="">                        
+                    </div>
+                    
+                    <div class="col">
+                        <img src="{{asset('img/trademarket57.png') }}" height="50px" width="50px" alt="">                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center mt-2">
+                        <h1 class="card-title">Encuesta enviada correctamente. !Gracias!</h1>                     
+                    </div>
+            </div>                                                   
             </div>
-          </div>
-        
+          </div>        
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

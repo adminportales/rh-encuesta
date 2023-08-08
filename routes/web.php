@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EstadisticasController;
 use App\Http\Controllers\PromolifeController;
 use App\Http\Controllers\PromoSaleController;
 use App\Http\Controllers\Respuesta;
@@ -24,8 +25,13 @@ use Illuminate\Support\Facades\Route;
 //bh
 Route::get('/',[Respuesta::class,'index']);
 Route::post('/bhsave',[Respuesta::class,'store'])->name('encuesta.save');
+
+//fin encuesta
 Route::get('/finish',[Respuesta::class,'finish'])->name('encuesta.fin');
-Route::get('/estadisticas',[Respuesta::class,'estadisticas'])->name('estadisticas');
+
+
+//estadisticas
+Route::get('/estadisticas',[EstadisticasController::class,'index'])->name('estadisticas');
 
 //promolife
 Route::get('/promolife',[PromolifeController::class,'index'])->name('promolife');
