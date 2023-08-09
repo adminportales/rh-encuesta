@@ -90,8 +90,8 @@ class EstadisticasController extends Controller
         }
 
         //pregunta 13
-        $opciones_13 = ['Muy malas', 'Malas', 'Regulares', 'Buenas ', 'Excelentes'];
-        foreach ($opciones_13 as $opcion) {
+        $opciones_13_1 = ['Muy malas', 'Malas', 'Regulares', 'Buenas ', 'Excelentes'];
+        foreach ($opciones_13_1 as $opcion) {
             $pregunta_13 = Answers::where('question_id', 13)->where('answer', $opcion)->count();
             $Resultado13[] = $pregunta_13;
         }
@@ -239,206 +239,217 @@ class EstadisticasController extends Controller
 
         //PROMO LIFE
         //39
-        // $edades = ['18-25', '26-35', '36-45', '46-55', '56-65', '65+'];
-        // foreach ($edades as $edad) {
-        //     $pregunta_39 = Answers::where('question_id', 39)->where('answer', $edad)->count();
-        //     $Resultado39[] = $pregunta_39;
-        // }
+        $edades = ['18-25', '26-35', '36-45', '46-55', '56-65', '65+'];
+        foreach ($edades as $edad) {
+            $pregunta_39 = Answers::where('question_id', 39)->where('answer', $edad)->count();
+            $Resultado39[] = $pregunta_39;
+        }
 
-        // //pregunta 2 
+        // //pregunta 40
 
-        // //pregunta 3 
-        // $areas = ['Administración', 'Almacén', 'Compras', 'Dirección', 'Diseño', 'Importaciones', 'Logística', 'Marketing', 'Operaciones', ' Recursos Humanos', 'Tecnología', 'Ventas'];
-        // foreach ($areas as $area) {
-        //     $pregunta_40 = Answers::where('question_id', 40)->where('answer', $area)->count();
-        //     $Resultado40[] = $pregunta_40;
-        // }
-        // //pregunta 4
-        // $tiempos = ['Menos de 6 meses', 'De 6 meses a 1 año', 'De 1 a 2 años', '3 a 4 años', '5 a 6 años', 'Mas de 7 años'];
-        // foreach ($tiempos as $tiempo) {
-        //     $pregunta_41 = Answers::where('question_id', 41)->where('answer', $tiempo)->count();
-        //     $Resultado41[] = $pregunta_41;
-        // }
+        // //pregunta 41        
+        foreach ($areas as $area) {
+            $pregunta_41 = Answers::where('question_id', 41)->where('answer', $area)->count();
+            $Resultado41[] = $pregunta_41;
+        }
+        // //pregunta 42
+       ;
+        foreach ($tiempos as $tiempo) {
+            $pregunta_42 = Answers::where('question_id', 42)->where('answer', $tiempo)->count();
+            $Resultado42[] = $pregunta_42;
+        }
     
 
-        // //pregunta 6
-        // $adaptacion = ['Siempre', 'Casi siempre', 'Algunas veces', 'Casi nunca ', 'Nunca'];
-        // foreach ($adaptacion as $opciones) {
-        //     $pregunta_42 = Answers::where('question_id', 42)->where('answer', $opciones)->count();
-        //     $Resultado42[] = $pregunta_42;
-        // }
+
+        //pregunta 43        
+        foreach ($adaptacion as $opciones) {
+            $pregunta_43 = Answers::where('question_id', 43)->where('answer', $opciones)->count();
+            $Resultado43[] = $pregunta_43;
+        }
         
 
-        // //pregunta 9
-        // $experiencias = ['Muy buena ', 'Mala ', 'Regular ', 'Buena ', 'Excelente'];
+        // //pregunta 44
+
         // foreach ($experiencias as $experiencia) {
-        //     $pregunta_43 = Answers::where('question_id',43)->where('answer', $experiencia)->count();
-        //     $Resultado43[] = $pregunta_43;
+        //     $pregunta_44 = Answers::where('question_id',44)->where('answer', $experiencia)->count();
+        //     $Resultado44[] = $pregunta_44;
         // }
 
-        // //pregunta 10
+        // //pregunta 45
         // $actividades = ['Siempre', 'Casi siempre', 'Algunas veces', 'Casi nunca ', 'Nunca'];
         // foreach ($actividades as $opciones) {
         //     $pregunta_44 = Answers::where('question_id', 44)->where('answer', $opciones)->count();
         //     $Resultado44[] = $pregunta_44;
         // }
-        // //11
-        // foreach ($actividades as $opciones) {
+      
 
-        //     $pregunta_45 = Answers::where('question_id', 45)->where('answer', $opciones)->count();
-        //     $Resultado45[] = $pregunta_45;
-        // }
-        // //pregunta12
-        // $opciones_12 = ['Nada de acuerdo', 'Poco de acuerdo ', 'Moderadamente de acuerdo', 'Bastante de acuerdo', 'Totalmente de acuerdo'];
 
-        // foreach ($opciones_12  as $opciones) {
-        //     $pregunta_46 = Answers::where('question_id', 46)->where('answer', $opciones)->count();
-        //     $Resultado46[] = $pregunta_46;
-        // }
+        foreach ($experiencias as $opciones) {
+            $pregunta_46 = Answers::where('question_id', 46)->where('answer', $opciones)->count();
+            $Resultado46[] = $pregunta_46;
+        }
+      
+       
 
-        // //pregunta 13
-        // $opciones_13 = ['Muy malas', 'Malas', 'Regulares', 'Buenas ', 'Excelentes'];
-        // foreach ($opciones_13 as $opcion) {
-        //     $pregunta_47 = Answers::where('question_id', 47)->where('answer', $opcion)->count();
-        //     $Resultado47[] = $pregunta_47;
-        // }
+        foreach ($actividades  as $opciones) {
+            $pregunta_47 = Answers::where('question_id', 47)->where('answer', $opciones)->count();
+            $Resultado47[] = $pregunta_47;
+        }
 
-        // //pregunta14
+        foreach ($actividades as $opciones) {
 
-        // //pregunta15
-        // foreach ($actividades as $opciones) {
-        //     $pregunta_48 = Answers::where('question_id', 48)->where('answer', $opciones)->count();
-        //     $Resultado48[] = $pregunta_48;
-        // }
-        // //pregunta16
-        // foreach ($actividades as $opcion) {
-        //     $pregunta_49 = Answers::where('question_id', 49)->where('answer', $opcion)->count();
-        //     $Resultado49[] = $pregunta_49;
-        // }
+            $pregunta_48 = Answers::where('question_id', 48)->where('answer', $opciones)->count();
+            $Resultado48[] = $pregunta_48;
+        }
+        //pregunta12
+       
 
-        // //17
-        // foreach ($actividades as $opciones) {
-        //     $pregunta_50 = Answers::where('question_id', 50)->where('answer', $opciones)->count();
-        //     $Resultado50[] = $pregunta_50;
-        // }
+        foreach ($opciones_12  as $opciones) {
+            $pregunta_49 = Answers::where('question_id', 49)->where('answer', $opciones)->count();
+            $Resultado49[] = $pregunta_49;
+        }
 
-        // //18
-        // foreach ($opciones_12 as $opciones) {
-        //     $pregunta_51 = Answers::where('question_id', 51)->where('answer', $opciones)->count();
-        //     $Resultado51[] = $pregunta_51;
-        // }
+        //pregunta 13
+        
+        foreach ($opciones_13_1 as $opcion) {
+            $pregunta_50 = Answers::where('question_id', 50)->where('answer', $opcion)->count();
+            $Resultado50[] = $pregunta_50;
+        }
 
-        // //19
-        // $opciones_13 = ['Si', 'No', 'No se '];
-        // foreach ($opciones_13 as $opciones) {
-        //     $pregunta_52 = Answers::where('question_id', 52)->where('answer', $opciones)->count();
-        //     $Resultado52[] = $pregunta_52;
-        // }
-        // //20
-        // $tiempos_trabajando = ['Menos de 1 año', '1 año', '2 años ', 'Mas de 2 años'];
-        // foreach ($tiempos_trabajando as $opciones) {
-        //     # code...
-        //     $pregunta_53 = Answers::where('question_id', 53)->where('answer', $opciones)->count();
-        //     $Resultado53[] = $pregunta_53;
-        // }
+        //pregunta14
 
-        // //21
-        // $opciones_21 = ['Muy mala', 'Mala', 'Regular', 'Buena', 'Excelente'];
-        // foreach ($opciones_21 as $opciones) {
-        //     $pregunta_54 = Answers::where('question_id', 54)->where('answer', $opciones)->count();
-        //     $Resultado54[] = $pregunta_54;
-        // }
+        //pregunta15
+        foreach ($actividades as $opciones) {
+            $pregunta_51 = Answers::where('question_id', 52)->where('answer', $opciones)->count();
+            $Resultado51[] = $pregunta_51;
+        }
+        
+        
+        //17
+        foreach ($actividades as $opciones) {
+            $pregunta_53 = Answers::where('question_id', 53)->where('answer', $opciones)->count();
+            $Resultado53[] = $pregunta_53;
+        }
 
-        // //22
-        // foreach ($opciones_21 as $opciones) {
-        //     $pregunta_55 = Answers::where('question_id', 55)->where('answer', $opciones)->count();
-        //     $Resultado55[] = $pregunta_55;
-        // }
+        //18
+        foreach ($actividades as $opciones) {
+            $pregunta_54 = Answers::where('question_id', 54)->where('answer', $opciones)->count();
+            $Resultado54[] = $pregunta_54;
+        }
 
-        // //23
-        // foreach ($actividades as $opciones) {
-        //     $pregunta_56 = Answers::where('question_id', 56)->where('answer', $opciones)->count();
-        //     $Resultado56[] = $pregunta_56;
-        // }
-        // //24
-        // $opciones_24 = ['Nada motivante', 'Poco motivante ', 'Moderadamente motivante ', 'Muy motivante ', 'Extremadamente motivante'];
-        // foreach ($opciones_24 as $opciones) {
-        //     $pregunta_57 = Answers::where('question_id', 57)->where('answer', $opciones)->count();
-        //     $Resultado57[] = $pregunta_57;
-        // }
-        // //25
-        // foreach ($actividades as $opciones) {
-        //     $pregunta_58 = Answers::where('question_id', 58)->where('answer', $opciones)->count();
-        //     $Resultado58[] = $pregunta_58;
-        // }
-        // //26
-        // foreach ($actividades as $opciones) {
-        //     $pregunta_59 = Answers::where('question_id', 59)->where('answer', $opciones)->count();
-        //     $Resultado59[] = $pregunta_59;
-        // }
-        // //27
+        //19
+    
+        foreach ($opciones_12 as $opciones) {
+            $pregunta_55 = Answers::where('question_id',55)->where('answer', $opciones)->count();
+            $Resultado55[] = $pregunta_55;
+        }
+        //20
+        
+        foreach ($opciones_13 as $opciones) {
+            # code...
+            $pregunta_56 = Answers::where('question_id', 56)->where('answer', $opciones)->count();
+            $Resultado56[] = $pregunta_56;
+        }
 
-        // foreach ($opciones_21 as $opciones) {
-        //     $pregunta_60 = Answers::where('question_id', 60)->where('answer', $opciones)->count();
-        //     $Resultado60[] = $pregunta_60;
-        // }
+        //21
+  
+        foreach ($tiempos_trabajando as $opciones) {
+            $pregunta_57 = Answers::where('question_id', 57)->where('answer', $opciones)->count();
+            $Resultado57[] = $pregunta_57;
+        }
 
-        // //28
-        // foreach ($actividades as $opciones) {
-        //     $pregunta_61 = Answers::where('question_id',61)->where('answer', $opciones)->count();
-        //     $Resultado61[] = $pregunta_61;
-        // }
+        //22
+        foreach ($opciones_21 as $opciones) {
+            $pregunta_58=Answers::where('question_id', 58)->where('answer', $opciones)->count();
+            $Resultado58[]=$pregunta_58;
+        }
 
-        // //29
-        // foreach ($actividades  as $opciones) {
-        //     $pregunta_62 = Answers::where('question_id', 62)->where('answer', $opciones)->count();
-        //     $Resultado62[] = $pregunta_62;
-        // }
+        //23
+        foreach ($opciones_21 as $opciones) {
+            $pregunta_59=Answers::where('question_id', 59)->where('answer', $opciones)->count();
+            $Resultado59[]=$pregunta_59;
+        }
+        //24
+        
+        foreach ($opciones_21 as $opciones) {
+            $pregunta_60=Answers::where('question_id', 60)->where('answer', $opciones)->count();
+            $Resultado60[]=$pregunta_60;
+        }
+        //25
+        foreach ($actividades as $opciones) {
+            $pregunta_25 = Answers::where('question_id', 25)->where('answer', $opciones)->count();
+            $Resultado25[] = $pregunta_25;
+        }
+        //26
+        foreach ($actividades as $opciones) {
+            $pregunta_26 = Answers::where('question_id', 26)->where('answer', $opciones)->count();
+            $Resultado26[] = $pregunta_26;
+        }
+        //27
 
-        // //30
+        foreach ($opciones_21 as $opciones) {
+            $pregunta_27 = Answers::where('question_id', 27)->where('answer', $opciones)->count();
+            $Resultado27[] = $pregunta_27;
+        }
 
-        // $opciones_sn = ['Si', 'No '];
-        // foreach ($opciones_sn as $opciones) {
-        //     $pregunta_63= Answers::where('question_id', 63)->where('answer', $opciones)->count();
-        //     $Resultado63[] = $pregunta_63;
-        // }
+        //28
+        foreach ($actividades as $opciones) {
+            $pregunta_28 = Answers::where('question_id', 28)->where('answer', $opciones)->count();
+            $Resultado28[] = $pregunta_28;
+        }
 
-        // //31
-        // $opciones_3 = ['Si ', 'No ', 'No tenemos'];
-        // foreach ($opciones_3 as $opciones) {
-        //     $pregunta_64 = Answers::where('question_id', 64)->where('answer', $opciones)->count();
-        //     $Resultado64[] = $pregunta_64;
-        // }
+        //29
+        foreach ($actividades  as $opciones) {
+            $pregunta_29 = Answers::where('question_id', 29)->where('answer', $opciones)->count();
+            $Resultado29[] = $pregunta_29;
+        }
 
-        // //32
-        // foreach ($opciones_3 as $opciones) {
-        //     $pregunta_65 = Answers::where('question_id', 65)->where('answer', $opciones)->count();
-        //     $Resultado65[] = $pregunta_65;
-        // }
+        //30
 
-        // //33
-        // foreach ($opciones_3 as $opciones) {
-        //     $pregunta_66 = Answers::where('question_id', 66)->where('answer', $opciones)->count();
-        //     $Resultado66[] = $pregunta_66;
-        // }
+        $opciones_sn = ['Si', 'No '];
+        foreach ($opciones_sn as $opciones) {
+            $pregunta_30 = Answers::where('question_id', 30)->where('answer', $opciones)->count();
+            $Resultado30[] = $pregunta_30;
+        }
 
-        // //34
-        // foreach ($opciones_3 as $opciones) {
-        //     $pregunta_67 = Answers::where('question_id', 67)->where('answer', $opciones)->count();
-        //     $Resultado67[] = $pregunta_67;
-        // }
+        //31
+        $opciones_3 = ['Si ', 'No ', 'No tenemos'];
+        foreach ($opciones_3 as $opciones) {
+            $pregunta_31 = Answers::where('question_id', 31)->where('answer', $opciones)->count();
+            $Resultado31[] = $pregunta_31;
+        }
 
-        // //35
-        // foreach ($opciones_sn as $opciones) {
-        //     $pregunta_68 = Answers::where('question_id', 68)->where('answer', $opciones)->count();
-        //     $Resultado68[] = $pregunta_68;
-        // }
+        //32
+        foreach ($opciones_3 as $opciones) {
+            $pregunta_32 = Answers::where('question_id', 32)->where('answer', $opciones)->count();
+            $Resultado32[] = $pregunta_32;
+        }
 
-        // //36
-        // foreach ($opciones_sn as $opciones) {
-        //     $pregunta_69 = Answers::where('question_id', 69)->where('answer', $opciones)->count();
-        //     $Resultado69[] = $pregunta_69;
-        // }
+        //33
+        foreach ($opciones_3 as $opciones) {
+            $pregunta_33 = Answers::where('question_id', 33)->where('answer', $opciones)->count();
+            $Resultado33[] = $pregunta_33;
+        }
+
+        //34
+        foreach ($opciones_3 as $opciones) {
+            $pregunta_34 = Answers::where('question_id', 34)->where('answer', $opciones)->count();
+            $Resultado34[] = $pregunta_34;
+        }
+
+        //35
+        foreach ($opciones_sn as $opciones) {
+            $pregunta_35 = Answers::where('question_id', 35)->where('answer', $opciones)->count();
+            $Resultado35[] = $pregunta_35;
+        }
+
+        //36
+        foreach ($opciones_sn as $opciones) {
+            $pregunta_36 = Answers::where('question_id', 36)->where('answer', $opciones)->count();
+            $Resultado36[] = $pregunta_36;
+        }
+
+
 
         // //37
         // //38
@@ -457,6 +468,7 @@ class EstadisticasController extends Controller
             'tiempos',
             'Resultado4',
             'bh',
+            'opciones_13_1',
             'Resultado5',
             'adaptacion',
             'Resultado6',
@@ -494,7 +506,28 @@ class EstadisticasController extends Controller
             'Resultado33',
             'Resultado34',
             'Resultado35',
-            'Resultado36'
+            'Resultado36',
+            'Resultado39',
+            'Resultado41',
+            'Resultado42',
+            'Resultado43',
+            'Resultado46',
+            'Resultado47',
+            'Resultado48',
+            'Resultado49',
+            'Resultado50',
+            'Resultado51',
+            'Resultado53',
+            'Resultado54',
+            'Resultado55',
+            'Resultado56',
+            'Resultado57',
+            'Resultado58',
+            'Resultado59',
+            'Resultado60',
+            
+
+
         ));
     }
 }

@@ -47,13 +47,13 @@
             </div>            
             <section class="bg-white p-4 rounded shadow-lg">                                
                 <p >
-                    ¡Bienvenido(a) estimado(a) colaborador(a) de <span class="fw-bold">BH TRADE MARKET SA DE CV!</span>
+                    ¡Bienvenido(a) estimado(a) colaborador(a) de <span class="fw-bold">PROMO ZALE SA DE CV!</span>
                 </p>
                 <br>
                 <p class="text-justify">El siguiente cuestionario tiene como objetivo conocer que tan satisfechos (as) se sienten nuestros (as) colaboradores (as) en su posición actual dentro de esta empresa y que Dirección General pueda conocer el sentir y la opinión cada uno de ustedes para tomar decisiones que ayuden al desarrollo personal y profesional de sus equipos de trabajo.</p>
                 <br>
                 <p>
-                    Pedimos de tu valioso apoyo con tu respuesta de la manera más honesta y objetiva, recordando que no existen respuestas buenas o malas, ya que buscamos mejorar de manera continua las condiciones laborales de <b>BH TRADE MARKET.</b>
+                    Pedimos de tu valioso apoyo con tu respuesta de la manera más honesta y objetiva, recordando que no existen respuestas buenas o malas, ya que buscamos mejorar de manera continua las condiciones laborales de <b>PROMO ZALE.</b>
                 </p>
                 <br>
                 <p>
