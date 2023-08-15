@@ -7,25 +7,23 @@ use Maatwebsite\Excel\Concerns\FromCollection;
 use Illuminate\Contracts\View\View;
 use Maatwebsite\Excel\Concerns\FromView;
 
-class AnswersExport implements FromView
+class AnswersPromolifeExport implements FromView
 {
     // /**
-    // * @return \Illuminate\Support\Collection
+    // *@return \Illuminate\Support\Collection
     // */
     // public function collection()
     // {
     //     return Answers::all();
-
     // }
-
-     /**
+    
+      /**
     * @return \Illuminate\Support\Collection
     */
     public function view(): View
     {
-        return view('exports.plantillas', [
-            'Answers' => Answers::where('company','BH-BH TRADE MARKET')->get()
+        return view('exports.promolifePlantilla', [
+            'Answers' => Answers::where('company','PROMO LIFE')->get()
         ]);
     }
-
 }

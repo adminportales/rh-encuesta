@@ -46,4 +46,11 @@ Route::get('/trademarket57',[Tm57Controller::class,'index'])->name('tm57');
 Route::post('/trademarket57save',[Tm57Controller::class,'store'])->name('tm57.save');
 
 //Reportes Excel
+//bh
 Route::get('/export',[ExportController::class,'export'])->name('export');
+//promolife
+Route::get('/exportPromo',[ExportController::class,'exportPromolife'])->name('export.promolife');
+//promo-sale
+
+//trademarket57
+

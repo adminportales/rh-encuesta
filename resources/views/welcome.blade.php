@@ -21,7 +21,7 @@
     p{
        
         font-family: 'Roboto Slab', serif;
-        font-size: 1rem;
+        font-size: 1rem;x
         text-justify:inherit;
     }
     h1{
@@ -70,7 +70,7 @@
         </div>
         <div class="col-7 mx-auto mt-2">
             @error('question_id.*')
-            <div class="alert alert-danger"><span style="color: red">Faltan campos por llenar. Intentalo de nuevo</span></div>
+            <div class="alert alert-danger"><span style="color: red">Faltaron campos por llenar. Intentalo de nuevo</span></div>
             @enderror
         </div>
         <section class=" preguntas mt-4">
