@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\EstadisticasController;
+use App\Http\Controllers\Respuesta;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Tm57Controller;
+use App\Http\Controllers\ExportController;
 use App\Http\Controllers\PromolifeController;
 use App\Http\Controllers\PromoSaleController;
-use App\Http\Controllers\Respuesta;
-use App\Http\Controllers\Tm57Controller;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EstadisticasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +45,5 @@ Route::post('/promosalesave',[PromoSaleController::class,'store'])->name('promos
 Route::get('/trademarket57',[Tm57Controller::class,'index'])->name('tm57');
 Route::post('/trademarket57save',[Tm57Controller::class,'store'])->name('tm57.save');
 
+//Reportes Excel
+Route::get('/export',[ExportController::class,'export'])->name('export');

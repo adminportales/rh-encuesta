@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Estadisticas</title>
 </head>
 
@@ -29,6 +29,10 @@
     <div class="container mt-2">
         <div class="row justify-content-center">
             <h2>BH-TRADE MARKET</h2>
+            <div class="col">
+                <a name="" id="" class="btn btn-primary" href="{{route('export')}}" role="button"><i class="bi bi-file-excel">Generar PDF</i></a>
+            </div>
+            
             <div class="col">
                 <div class="card shadow card-total">
                     <h6 class="text-center">¿A qué rango de edad perteneces?</h6>
@@ -246,10 +250,11 @@
             </div>
     
         </div>
+       
     </div>
 
     {{-- promo life --}}
-    <div class="container mt-2">
+    {{-- <div class="container mt-2">
         <div class="row justify-content-center">
             <h2>PROMO LIFE</h2>
             <div class="col">
@@ -458,7 +463,7 @@
             </div>
     
         </div>
-    </div>
+    </div> --}}
 
     {{-- Promo sale --}}
 
