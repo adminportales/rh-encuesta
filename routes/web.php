@@ -32,7 +32,10 @@ Route::get('/finish',[Respuesta::class,'finish'])->name('encuesta.fin');
 
 
 //estadisticas
-Route::get('/estadisticas',[EstadisticasController::class,'index'])->name('estadisticas');
+Route::get('/estadisticas/bh',[EstadisticasController::class,'index'])->name('estadisticas');
+Route::get('/estadisticas/promozale',[EstadisticasController::class,'promosaleEstadisticas'])->name('estadisticas.promozale');
+Route::get('/estadisticas/promolife',[EstadisticasController::class,'PromolifeEstadisticas'])->name('estadisticas.promolife');
+Route::get('/estadisticas/trademarket57',[EstadisticasController::class,'tradeMarket57Estadisticas'])->name('estadisticas.trademarket57');
 
 //promolife
 Route::get('/promolife',[PromolifeController::class,'index'])->name('promolife');

@@ -11,11 +11,25 @@ class EstadisticasController extends Controller
     public function index()
     {
         //logica estadistcas por empresas
-
+        
         //BH-TRADE
-
-        //pregunta 1  
+        $areas = ['Administración', 'Almacén', 'Compras', 'Dirección', 'Diseño', 'Importaciones', 'Logística', 'Marketing', 'Operaciones', ' Recursos Humanos', 'Tecnología', 'Ventas'];
         $edades = ['18-25', '26-35', '36-45', '46-55', '56-65', '65+'];
+        $tiempos = ['Menos de 6 meses', 'De 6 meses a 1 año', 'De 1 a 2 años', '3 a 4 años', '5 a 6 años', 'Mas de 7 años'];
+        $bh = ['BH México', 'Bh Cancún '];
+        $adaptacion = ['Siempre', 'Casi siempre', 'Algunas veces', 'Casi nunca ', 'Nunca'];
+        $experiencias = ['Muy buena ', 'Mala ', 'Regular ', 'Buena ', 'Excelente'];
+        $opciones_12 = ['Nada de acuerdo', 'Poco de acuerdo ', 'Moderadamente de acuerdo', 'Bastante de acuerdo', 'Totalmente de acuerdo'];
+        $actividades = ['Siempre', 'Casi siempre', 'Algunas veces', 'Casi nunca ', 'Nunca'];
+        $opciones_13_1 = ['Muy malas', 'Malas', 'Regulares', 'Buenas ', 'Excelentes'];
+        $opciones_21 = ['Muy mala', 'Mala', 'Regular', 'Buena', 'Excelente'];
+        $tiempos_trabajando = ['Menos de 1 año', '1 año', '2 años ', 'Mas de 2 años'];
+        $opciones_24 = ['Nada motivante', 'Poco motivante ', 'Moderadamente motivante ', 'Muy motivante ', 'Extremadamente motivante'];
+        $opciones_13 = ['Si', 'No', 'No se '];
+        $opciones_sn = ['Si', 'No '];
+        $opciones_3 = ['Si ', 'No ', 'No tenemos'];
+        
+        //pregunta 1  
 
         foreach ($edades as $edad) {
             $pregunta_1 = Answers::where('question_id', 1)->where('answer', $edad)->count();
@@ -25,14 +39,12 @@ class EstadisticasController extends Controller
         //pregunta 2 
 
         //pregunta 3 
-        $areas = ['Administración', 'Almacén', 'Compras', 'Dirección', 'Diseño', 'Importaciones', 'Logística', 'Marketing', 'Operaciones', ' Recursos Humanos', 'Tecnología', 'Ventas'];
 
         foreach ($areas as $area) {
             $pregunta_3 = Answers::where('question_id', 3)->where('answer', $area)->count();
             $Resultado3[] = $pregunta_3;
         }
         //pregunta 4
-        $tiempos = ['Menos de 6 meses', 'De 6 meses a 1 año', 'De 1 a 2 años', '3 a 4 años', '5 a 6 años', 'Mas de 7 años'];
 
         foreach ($tiempos as $tiempo) {
             $pregunta_4 = Answers::where('question_id', 4)->where('answer', $tiempo)->count();
@@ -40,14 +52,12 @@ class EstadisticasController extends Controller
         }
 
         //pregunta 5
-        $bh = ['BH México', 'Bh Cancún '];
         foreach ($bh as $empresa) {
             $pregunta_5 = Answers::where('question_id', 5)->where('answer', $empresa)->count();
             $Resultado5[] = $pregunta_5;
         }
 
         //pregunta 6
-        $adaptacion = ['Siempre', 'Casi siempre', 'Algunas veces', 'Casi nunca ', 'Nunca'];
         foreach ($adaptacion as $opciones) {
             $pregunta_6 = Answers::where('question_id', 6)->where('answer', $opciones)->count();
             $Resultado6[] = $pregunta_6;
@@ -63,14 +73,12 @@ class EstadisticasController extends Controller
         //pregunta 8
 
         //pregunta 9
-        $experiencias = ['Muy buena ', 'Mala ', 'Regular ', 'Buena ', 'Excelente'];
         foreach ($experiencias as $experiencia) {
             $pregunta_9 = Answers::where('question_id', 9)->where('answer', $experiencia)->count();
             $Resultado9[] = $pregunta_9;
         }
 
         //pregunta 10
-        $actividades = ['Siempre', 'Casi siempre', 'Algunas veces', 'Casi nunca ', 'Nunca'];
         foreach ($actividades as $opciones) {
             $pregunta_10 = Answers::where('question_id', 10)->where('answer', $opciones)->count();
             $Resultado10[] = $pregunta_10;
@@ -82,7 +90,6 @@ class EstadisticasController extends Controller
             $Resultado11[] = $pregunta_11;
         }
         //pregunta12
-        $opciones_12 = ['Nada de acuerdo', 'Poco de acuerdo ', 'Moderadamente de acuerdo', 'Bastante de acuerdo', 'Totalmente de acuerdo'];
 
         foreach ($opciones_12  as $opciones) {
             $pregunta_12 = Answers::where('question_id', 12)->where('answer', $opciones)->count();
@@ -90,7 +97,6 @@ class EstadisticasController extends Controller
         }
 
         //pregunta 13
-        $opciones_13_1 = ['Muy malas', 'Malas', 'Regulares', 'Buenas ', 'Excelentes'];
         foreach ($opciones_13_1 as $opcion) {
             $pregunta_13 = Answers::where('question_id', 13)->where('answer', $opcion)->count();
             $Resultado13[] = $pregunta_13;
@@ -122,13 +128,11 @@ class EstadisticasController extends Controller
         }
 
         //19
-        $opciones_13 = ['Si', 'No', 'No se '];
         foreach ($opciones_13 as $opciones) {
             $pregunta_19 = Answers::where('question_id', 19)->where('answer', $opciones)->count();
             $Resultado19[] = $pregunta_19;
         }
         //20
-        $tiempos_trabajando = ['Menos de 1 año', '1 año', '2 años ', 'Mas de 2 años'];
         foreach ($tiempos_trabajando as $opciones) {
             # code...
             $pregunta_20 = Answers::where('question_id', 20)->where('answer', $opciones)->count();
@@ -136,7 +140,6 @@ class EstadisticasController extends Controller
         }
 
         //21
-        $opciones_21 = ['Muy mala', 'Mala', 'Regular', 'Buena', 'Excelente'];
         foreach ($opciones_21 as $opciones) {
             $pregunta_21 = Answers::where('question_id', 21)->where('answer', $opciones)->count();
             $Resultado21[] = $pregunta_21;
@@ -154,7 +157,6 @@ class EstadisticasController extends Controller
             $Resultado23[] = $pregunta_23;
         }
         //24
-        $opciones_24 = ['Nada motivante', 'Poco motivante ', 'Moderadamente motivante ', 'Muy motivante ', 'Extremadamente motivante'];
         foreach ($opciones_24 as $opciones) {
             $pregunta_24 = Answers::where('question_id', 24)->where('answer', $opciones)->count();
             $Resultado24[] = $pregunta_24;
@@ -190,14 +192,12 @@ class EstadisticasController extends Controller
 
         //30
 
-        $opciones_sn = ['Si', 'No '];
         foreach ($opciones_sn as $opciones) {
             $pregunta_30 = Answers::where('question_id', 30)->where('answer', $opciones)->count();
             $Resultado30[] = $pregunta_30;
         }
 
         //31
-        $opciones_3 = ['Si ', 'No ', 'No tenemos'];
         foreach ($opciones_3 as $opciones) {
             $pregunta_31 = Answers::where('question_id', 31)->where('answer', $opciones)->count();
             $Resultado31[] = $pregunta_31;
@@ -232,14 +232,79 @@ class EstadisticasController extends Controller
             $pregunta_36 = Answers::where('question_id', 36)->where('answer', $opciones)->count();
             $Resultado36[] = $pregunta_36;
         }
+                
 
-        //37
-        //38
+        return view('Estadisticas.estadisticas', compact(
+            'edades',
+            'Resultado',
+            'areas',
+            'Resultado3',
+            'tiempos',
+            'Resultado4',
+            'bh',
+            'opciones_13_1',
+            'Resultado5',
+            'adaptacion',
+            'Resultado6',
+            'experiencias',
+            'Resultado9',
+            'actividades',
+            'Resultado10',
+            'Resultado11',
+            'opciones_12',
+            'Resultado12',
+            'opciones_13',
+            'Resultado13',
+            'Resultado15',
+            'Resultado16',
+            'Resultado17',
+            'Resultado18',
+            'Resultado19',
+            'tiempos_trabajando',
+            'Resultado20',
+            'opciones_21',
+            'Resultado21',
+            'Resultado22',
+            'Resultado23',
+            'Resultado24',
+            'Resultado25',
+            'Resultado26',
+            'Resultado27',
+            'Resultado28',
+            'Resultado29',
+            'Resultado30',
+            'opciones_sn',
+            'Resultado31',
+            'opciones_3',
+            'Resultado32',
+            'Resultado33',
+            'Resultado34',
+            'Resultado35',
+            'Resultado36',));
+    }
 
+
+    public function PromolifeEstadisticas()
+    {
+        $areas = ['Administración', 'Almacén', 'Compras', 'Dirección', 'Diseño', 'Importaciones', 'Logística', 'Marketing', 'Operaciones', ' Recursos Humanos', 'Tecnología', 'Ventas'];
+        $edades = ['18-25', '26-35', '36-45', '46-55', '56-65', '65+'];
+        $tiempos = ['Menos de 6 meses', 'De 6 meses a 1 año', 'De 1 a 2 años', '3 a 4 años', '5 a 6 años', 'Mas de 7 años'];
+        $adaptacion = ['Siempre', 'Casi siempre', 'Algunas veces', 'Casi nunca ', 'Nunca'];
+        $experiencias = ['Muy buena ', 'Mala ', 'Regular ', 'Buena ', 'Excelente'];
+        $opciones_12 = ['Nada de acuerdo', 'Poco de acuerdo ', 'Moderadamente de acuerdo', 'Bastante de acuerdo', 'Totalmente de acuerdo'];
+        $actividades = ['Siempre', 'Casi siempre', 'Algunas veces', 'Casi nunca ', 'Nunca'];
+        $opciones_13_1 = ['Muy malas', 'Malas', 'Regulares', 'Buenas ', 'Excelentes'];
+        $opciones_21 = ['Muy mala', 'Mala', 'Regular', 'Buena', 'Excelente'];
+        $tiempos_trabajando = ['Menos de 1 año', '1 año', '2 años ', 'Mas de 2 años'];
+        $opciones_24 = ['Nada motivante', 'Poco motivante ', 'Moderadamente motivante ', 'Muy motivante ', 'Extremadamente motivante'];
+        $opciones_13 = ['Si', 'No', 'No se '];
+        $opciones_sn = ['Si', 'No '];
+        $opciones_3 = ['Si ', 'No ', 'No tenemos'];
+        
 
         //PROMO LIFE
-        //39
-        $edades = ['18-25', '26-35', '36-45', '46-55', '56-65', '65+'];
+       
+        
         foreach ($edades as $edad) {
             $pregunta_39 = Answers::where('question_id', 39)->where('answer', $edad)->count();
             $Resultado39[] = $pregunta_39;
@@ -320,8 +385,8 @@ class EstadisticasController extends Controller
 
         //pregunta15
         foreach ($actividades as $opciones) {
-            $pregunta_51 = Answers::where('question_id', 52)->where('answer', $opciones)->count();
-            $Resultado51[] = $pregunta_51;
+            $pregunta_52 = Answers::where('question_id', 52)->where('answer', $opciones)->count();
+            $Resultado52[] = $pregunta_52;
         }
         
         
@@ -375,6 +440,12 @@ class EstadisticasController extends Controller
             $pregunta_60=Answers::where('question_id', 60)->where('answer', $opciones)->count();
             $Resultado60[]=$pregunta_60;
         }
+
+        foreach ($opciones_24 as $opciones) {
+            $pregunta_61=Answers::where('question_id', 61)->where('answer', $opciones)->count();
+            $Resultado61[]=$pregunta_61;
+        }
+
         //25
         foreach ($actividades as $opciones) {
             $pregunta_62 = Answers::where('question_id', 62)->where('answer', $opciones)->count();
@@ -406,14 +477,14 @@ class EstadisticasController extends Controller
 
         //30
 
-        $opciones_sn = ['Si', 'No '];
+        
         foreach ($opciones_sn as $opciones) {
             $pregunta_67 = Answers::where('question_id', 67)->where('answer', $opciones)->count();
             $Resultado67[] = $pregunta_67;
         }
 
         //31
-        $opciones_3 = ['Si ', 'No ', 'No tenemos'];
+        
         foreach ($opciones_3 as $opciones) {
             $pregunta_68 = Answers::where('question_id', 68)->where('answer', $opciones)->count();
             $Resultado68[] = $pregunta_68;
@@ -450,10 +521,74 @@ class EstadisticasController extends Controller
         }
 
 
-        //PROMO SALE
 
-        //39
+        return view('Estadisticas.estadisticasPromolife',compact( 
+        'edades', 
+        'areas'  ,
+        'tiempos',
+        'adaptacion',
+        'experiencias',
+        'opciones_12',
+        'actividades',
+        'opciones_13_1',
+        'opciones_21',
+        'tiempos_trabajando',
+        'opciones_sn',
+        'opciones_24',
+        'opciones_13',
+        'opciones_3',
+        'Resultado39',
+        'Resultado41',
+        'Resultado42',
+        'Resultado43',
+        'Resultado46',
+        'Resultado47',
+        'Resultado48',
+        'Resultado49',
+        'Resultado50',
+        'Resultado52',
+        'Resultado53',
+        'Resultado54',
+        'Resultado55',
+        'Resultado56',
+        'Resultado57',
+        'Resultado58',
+        'Resultado59',
+        'Resultado60',       
+        'Resultado62',
+        'Resultado63',
+        'Resultado64',
+        'Resultado65',
+        'Resultado66',
+        'Resultado67',
+        'Resultado68',
+        'Resultado69',
+        'Resultado70',
+        'Resultado71',
+        'Resultado72',
+        'Resultado73',));
+    }
+
+
+    public function promosaleEstadisticas()
+    {
+
+        $areas = ['Administración', 'Almacén', 'Compras', 'Dirección', 'Diseño', 'Importaciones', 'Logística', 'Marketing', 'Operaciones', ' Recursos Humanos', 'Tecnología', 'Ventas'];
         $edades = ['18-25', '26-35', '36-45', '46-55', '56-65', '65+'];
+        $tiempos = ['Menos de 6 meses', 'De 6 meses a 1 año', 'De 1 a 2 años', '3 a 4 años', '5 a 6 años', 'Mas de 7 años'];
+        $bh = ['BH México', 'Bh Cancún '];
+        $adaptacion = ['Siempre', 'Casi siempre', 'Algunas veces', 'Casi nunca ', 'Nunca'];
+        $experiencias = ['Muy buena ', 'Mala ', 'Regular ', 'Buena ', 'Excelente'];
+        $opciones_12 = ['Nada de acuerdo', 'Poco de acuerdo ', 'Moderadamente de acuerdo', 'Bastante de acuerdo', 'Totalmente de acuerdo'];
+        $actividades = ['Siempre', 'Casi siempre', 'Algunas veces', 'Casi nunca ', 'Nunca'];
+        $opciones_13_1 = ['Muy malas', 'Malas', 'Regulares', 'Buenas ', 'Excelentes'];
+        $opciones_21 = ['Muy mala', 'Mala', 'Regular', 'Buena', 'Excelente'];
+        $tiempos_trabajando = ['Menos de 1 año', '1 año', '2 años ', 'Mas de 2 años'];
+        $opciones_24 = ['Nada motivante', 'Poco motivante ', 'Moderadamente motivante ', 'Muy motivante ', 'Extremadamente motivante'];
+        $opciones_13 = ['Si', 'No', 'No se '];
+        $opciones_sn = ['Si', 'No '];
+        $opciones_3 = ['Si ', 'No ', 'No tenemos'];
+
         foreach ($edades as $edad) {
             $pregunta_76 = Answers::where('question_id',76 )->where('answer', $edad)->count();
             $Resultado76[] = $pregunta_76;
@@ -590,20 +725,20 @@ class EstadisticasController extends Controller
             $Resultado97[]=$pregunta_97;
         }
         //25
-        foreach ($actividades as $opciones) {
+        foreach ($opciones_24 as $opciones) {
             $pregunta_98 = Answers::where('question_id', 98)->where('answer', $opciones)->count();
             $Resultado98[] = $pregunta_98;
         }
         
-        $opciones_siempre = ['Siempre', 'Casi siempre', 'Algunas veces', 'Casi nunca ', 'Nunca'];
+        
 
-        foreach ($opciones_siempre as $opciones) {
+        foreach ($actividades as $opciones) {
             $pregunta_99 = Answers::where('question_id', 99)->where('answer', $opciones)->count();
             $Resultado99[] = $pregunta_99;
         }
         //27
 
-        foreach ($opciones_21 as $opciones) {
+        foreach ($actividades as $opciones) {
             $pregunta_100 = Answers::where('question_id',100)->where('answer', $opciones)->count();
             $Resultado100[] = $pregunta_100;
         }
@@ -622,14 +757,14 @@ class EstadisticasController extends Controller
 
         //30
 
-        $opciones_sn = ['Si', 'No '];
+        
         foreach ($opciones_sn as $opciones) {
             $pregunta_103 = Answers::where('question_id', 103)->where('answer', $opciones)->count();
             $Resultado103[] = $pregunta_103;
         }
 
         //31
-        $opciones_3 = ['Si ', 'No ', 'No tenemos'];
+       
         foreach ($opciones_3 as $opciones) {
             $pregunta_104 = Answers::where('question_id', 104)->where('answer', $opciones)->count();
             $Resultado104[] = $pregunta_104;
@@ -669,118 +804,333 @@ class EstadisticasController extends Controller
             $pregunta_110 = Answers::where('question_id', 110)->where('answer', $opciones)->count();
             $Resultado110[] = $pregunta_110;
         }
+
+        return view('Estadisticas.estadisticasPromosale',compact(
+        'edades', 
+        'areas'  ,
+        'tiempos',
+        'adaptacion',
+        'experiencias',
+        'opciones_12',
+        'actividades',
+        'opciones_13_1',
+        'opciones_21',
+        'tiempos_trabajando',
+        'opciones_sn',
+        'opciones_24',
+        'opciones_13',
+        'opciones_3',
+        'Resultado76',
+        'Resultado78',
+        'Resultado79',
+        'Resultado80',          
+        'Resultado83',
+        'Resultado84',            
+        'Resultado85',
+        'Resultado86',
+        'Resultado87',
+        'Resultado89',
+        'Resultado90',
+        'Resultado91',
+        'Resultado92',
+        'Resultado93',
+        'Resultado94',
+        'Resultado95',
+        'Resultado96',
+        'Resultado97',
+        'Resultado98',
+        'Resultado99',
+        'Resultado100',
+        'Resultado101',
+        'Resultado102',
+        'Resultado103',
+        'Resultado104',
+        'Resultado105',
+        'Resultado106',
+        'Resultado107',
+        'Resultado108',
+        'Resultado109',
+        'Resultado110',));
+    }
+
+    public function tradeMarket57Estadisticas()
+    {
+        
+        $areas = ['Administración', 'Almacén', 'Compras', 'Dirección', 'Diseño', 'Importaciones', 'Logística', 'Marketing', 'Operaciones', ' Recursos Humanos', 'Tecnología', 'Ventas'];
+        $edades = ['18-25', '26-35', '36-45', '46-55', '56-65', '65+'];
+        $tiempos = ['Menos de 6 meses', 'De 6 meses a 1 año', 'De 1 a 2 años', '3 a 4 años', '5 a 6 años', 'Mas de 7 años'];
+        $bh = ['BH México', 'Bh Cancún '];
+        $adaptacion = ['Siempre', 'Casi siempre', 'Algunas veces', 'Casi nunca ', 'Nunca'];
+        $experiencias = ['Muy buena ', 'Mala ', 'Regular ', 'Buena ', 'Excelente'];
+        $opciones_12 = ['Nada de acuerdo', 'Poco de acuerdo ', 'Moderadamente de acuerdo', 'Bastante de acuerdo', 'Totalmente de acuerdo'];
+        $actividades = ['Siempre', 'Casi siempre', 'Algunas veces', 'Casi nunca ', 'Nunca'];
+        $opciones_13_1 = ['Muy malas', 'Malas', 'Regulares', 'Buenas ', 'Excelentes'];
+        $opciones_21 = ['Muy mala', 'Mala', 'Regular', 'Buena', 'Excelente'];
+        $tiempos_trabajando = ['Menos de 1 año', '1 año', '2 años ', 'Mas de 2 años'];
+        $opciones_24 = ['Nada motivante', 'Poco motivante ', 'Moderadamente motivante ', 'Muy motivante ', 'Extremadamente motivante'];
+        $opciones_13 = ['Si', 'No', 'No se '];
+        $opciones_sn = ['Si', 'No '];
+        $opciones_3 = ['Si ', 'No ', 'No tenemos'];
+
+        foreach ($edades as $edad) {
+            $pregunta_113 = Answers::where('question_id',113 )->where('answer', $edad)->count();
+            $Resultado113[] = $pregunta_113;
+        }
+
+
+             
+        foreach ($areas as $area) {
+            $pregunta_115 = Answers::where('question_id', 115)->where('answer', $area)->count();
+            $Resultado115[] = $pregunta_115;
+        }
+      
+       
+        foreach ($tiempos as $tiempo) {
+            $pregunta_116= Answers::where('question_id', 116)->where('answer', $tiempo)->count();
+            $Resultado116[] = $pregunta_116;
+        }
+    
+
+
+              
+        foreach ($adaptacion as $opciones) {
+            $pregunta_117 = Answers::where('question_id', 117)->where('answer', $opciones)->count();
+            $Resultado117[] = $pregunta_117;
+        }
         
 
-        return view('Estadisticas.estadisticas', compact(
-            'edades',
-            'Resultado',
-            'areas',
-            'Resultado3',
-            'tiempos',
-            'Resultado4',
-            'bh',
-            'opciones_13_1',
-            'Resultado5',
-            'adaptacion',
-            'Resultado6',
-            'experiencias',
-            'Resultado9',
-            'actividades',
-            'Resultado10',
-            'Resultado11',
-            'opciones_12',
-            'Resultado12',
-            'opciones_13',
-            'Resultado13',
-            'Resultado15',
-            'Resultado16',
-            'Resultado17',
-            'Resultado18',
-            'Resultado19',
-            'tiempos_trabajando',
-            'Resultado20',
-            'opciones_21',
-            'Resultado21',
-            'Resultado22',
-            'Resultado23',
-            'Resultado24',
-            'Resultado25',
-            'Resultado26',
-            'Resultado27',
-            'Resultado28',
-            'Resultado29',
-            'Resultado30',
-            'opciones_sn',
-            'Resultado31',
-            'opciones_3',
-            'Resultado32',
-            'Resultado33',
-            'Resultado34',
-            'Resultado35',
-            'Resultado36',
-            'Resultado39',
-            'Resultado41',
-            'Resultado42',
-            'Resultado43',
-            'Resultado46',
-            'Resultado47',
-            'Resultado48',
-            'Resultado49',
-            'Resultado50',
-            'Resultado51',
-            'Resultado53',
-            'Resultado54',
-            'Resultado55',
-            'Resultado56',
-            'Resultado57',
-            'Resultado58',
-            'Resultado59',
-            'Resultado60',       
-            'Resultado62',
-            'Resultado63',
-            'Resultado64',
-            'Resultado65',
-            'Resultado66',
-            'Resultado67',
-            'Resultado68',
-            'Resultado69',
-            'Resultado70',
-            'Resultado71',
-            'Resultado72',
-            'Resultado73',
-            'Resultado76',
-            'Resultado78',
-            'Resultado79',
-            'Resultado80',          
-            'Resultado83',
-            'Resultado84',            
-            'Resultado85',
-            'Resultado86',
-            'Resultado87',
-            'Resultado89',
-            'Resultado90',
-            'Resultado91',
-            'Resultado92',
-            'Resultado93',
-            'Resultado94',
-            'Resultado95',
-            'Resultado96',
-            'Resultado97',
-            'Resultado98',
-            'Resultado99',
-            'Resultado100',
-            'Resultado101',
-            'Resultado102',
-            'Resultado103',
-            'Resultado104',
-            'Resultado105',
-            'Resultado106',
-            'Resultado107',
-            'Resultado108',
-            'Resultado109',
-            'Resultado110',
-            'opciones_siempre'
+      
+
+        // foreach ($experiencias as $experiencia) {
+        //     $pregunta_44 = Answers::where('question_id',44)->where('answer', $experiencia)->count();
+        //     $Resultado44[] = $pregunta_44;
+        // }
+
+        // //pregunta 45
+        // $actividades = ['Siempre', 'Casi siempre', 'Algunas veces', 'Casi nunca ', 'Nunca'];
+        // foreach ($actividades as $opciones) {
+        //     $pregunta_44 = Answers::where('question_id', 44)->where('answer', $opciones)->count();
+        //     $Resultado44[] = $pregunta_44;
+        // }
+      
+
+
+        foreach ($experiencias as $opciones) {
+            $pregunta_120= Answers::where('question_id', 120)->where('answer', $opciones)->count();
+            $Resultado120[] = $pregunta_120;
+        }
+      
+       
+
+        foreach ($actividades  as $opciones) {
+            $pregunta_121 = Answers::where('question_id', 121)->where('answer', $opciones)->count();
+            $Resultado121[] = $pregunta_121;
+        }
+
+        foreach ($actividades as $opciones) {
+
+            $pregunta_122 = Answers::where('question_id', 122)->where('answer', $opciones)->count();
+            $Resultado122[] = $pregunta_122;
+        }
         
-        ));
+       
+
+        foreach ($opciones_12  as $opciones) {
+            $pregunta_123 = Answers::where('question_id', 123)->where('answer', $opciones)->count();
+            $Resultado123[] = $pregunta_123;
+        }
+
+        
+        
+        foreach ($opciones_13_1 as $opcion) {
+            $pregunta_124 = Answers::where('question_id', 124)->where('answer', $opcion)->count();
+            $Resultado124[] = $pregunta_124;
+        }
+
+        
+        foreach ($actividades as $opciones) {
+            $pregunta_126 = Answers::where('question_id', 126)->where('answer', $opciones)->count();
+            $Resultado126[] = $pregunta_126;
+        }
+        
+        
+      
+        foreach ($actividades as $opciones) {
+            $pregunta_127 = Answers::where('question_id', 127)->where('answer', $opciones)->count();
+            $Resultado127[] = $pregunta_127;
+        }
+
+      
+        foreach ($actividades as $opciones) {
+            $pregunta_128 = Answers::where('question_id', 128)->where('answer', $opciones)->count();
+            $Resultado128[] = $pregunta_128;
+        }
+
+        
+    
+        foreach ($opciones_12 as $opciones) {
+            $pregunta_129 = Answers::where('question_id',129)->where('answer', $opciones)->count();
+            $Resultado129[] = $pregunta_129;
+        }
+       
+        foreach ($opciones_13 as $opciones) {
+            # code...
+            $pregunta_130 = Answers::where('question_id', 130)->where('answer', $opciones)->count();
+            $Resultado130[] = $pregunta_130;
+        }
+
+        
+  
+        foreach ($tiempos_trabajando as $opciones) {
+            $pregunta_131 = Answers::where('question_id', 131)->where('answer', $opciones)->count();
+            $Resultado131[] = $pregunta_131;
+        }
+
+        foreach ($opciones_21 as $opciones) {
+            $pregunta_132=Answers::where('question_id', 132)->where('answer', $opciones)->count();
+            $Resultado132[]=$pregunta_132;
+        }
+
+       
+        foreach ($opciones_21 as $opciones) {
+            $pregunta_133=Answers::where('question_id', 133)->where('answer', $opciones)->count();
+            $Resultado133[]=$pregunta_133;
+        }
+        
+        
+        foreach ($actividades as $opciones) {
+            $pregunta_134=Answers::where('question_id', 134)->where('answer', $opciones)->count();
+            $Resultado134[]=$pregunta_134;
+        }
+        
+
+        foreach ($opciones_24 as $opciones) {
+            $pregunta_135 = Answers::where('question_id', 135)->where('answer', $opciones)->count();
+            $Resultado135[] = $pregunta_135;
+        }
+        
+        
+
+        foreach ($actividades as $opciones) {
+            $pregunta_136 = Answers::where('question_id', 136)->where('answer', $opciones)->count();
+            $Resultado136[] = $pregunta_136;
+        }
+        
+
+        foreach ($actividades as $opciones) {
+            $pregunta_137 = Answers::where('question_id',137)->where('answer', $opciones)->count();
+            $Resultado137[] = $pregunta_137;
+        }
+
+        
+        foreach ($actividades as $opciones) {
+            $pregunta_138 = Answers::where('question_id', 138)->where('answer', $opciones)->count();
+            $Resultado138[] = $pregunta_138;
+        }
+
+        
+        foreach ($actividades  as $opciones) {
+            $pregunta_139 = Answers::where('question_id', 139)->where('answer', $opciones)->count();
+            $Resultado139[] = $pregunta_139;
+        }
+
+        
+        foreach ($opciones_sn as $opciones) {
+            $pregunta_140 = Answers::where('question_id', 140)->where('answer', $opciones)->count();
+            $Resultado140[] = $pregunta_140;
+        }
+
+       
+       
+        foreach ($opciones_3 as $opciones) {
+            $pregunta_141 = Answers::where('question_id', 141)->where('answer', $opciones)->count();
+            $Resultado141[] = $pregunta_141;
+        }
+
+        
+        foreach ($opciones_3 as $opciones) {
+            $pregunta_142 = Answers::where('question_id', 142)->where('answer', $opciones)->count();
+            $Resultado142[] = $pregunta_142;
+        }
+
+        
+        foreach ($opciones_3 as $opciones) {
+            $pregunta_143 = Answers::where('question_id', 143)->where('answer', $opciones)->count();
+            $Resultado143[] = $pregunta_143;
+        }
+
+       
+        foreach ($opciones_3 as $opciones) {
+            $pregunta_144 = Answers::where('question_id', 144)->where('answer', $opciones)->count();
+            $Resultado144[] = $pregunta_144;
+        }
+
+        
+        foreach ($opciones_3 as $opciones) {
+            $pregunta_145 = Answers::where('question_id', 145)->where('answer', $opciones)->count();
+            $Resultado145[] = $pregunta_145;
+        }
+
+        
+        foreach ($opciones_sn as $opciones) {
+            $pregunta_146 = Answers::where('question_id', 146)->where('answer', $opciones)->count();
+            $Resultado146[] = $pregunta_146;
+        }
+
+        foreach ($opciones_sn as $opciones) {
+            $pregunta_147 = Answers::where('question_id', 147)->where('answer', $opciones)->count();
+            $Resultado147[] = $pregunta_147;
+        }
+
+
+
+        return view('Estadisticas.estadisticasTradeMarket57',compact(
+        'edades', 
+        'areas'  ,
+        'tiempos',
+        'adaptacion',
+        'experiencias',
+        'opciones_12',
+        'actividades',
+        'opciones_13_1',
+        'opciones_21',
+        'tiempos_trabajando',
+        'opciones_sn',
+        'opciones_24',
+        'opciones_13',
+        'opciones_3',
+        'Resultado113',
+        'Resultado115',
+        'Resultado116',
+        'Resultado117',          
+        'Resultado120',
+        'Resultado121',            
+        'Resultado122',
+        'Resultado123',
+        'Resultado124',
+        'Resultado126',
+        'Resultado127',
+        'Resultado128',
+        'Resultado129',
+        'Resultado130',
+        'Resultado131',
+        'Resultado132',
+        'Resultado133',
+        'Resultado134',
+        'Resultado135',
+        'Resultado136',
+        'Resultado137',
+        'Resultado138',
+        'Resultado139',
+        'Resultado140',
+        'Resultado141',
+        'Resultado142',
+        'Resultado143',
+        'Resultado144',
+        'Resultado145',
+        'Resultado146',
+        'Resultado147',
+    ));
     }
+
 }
