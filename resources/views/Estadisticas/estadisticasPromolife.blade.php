@@ -31,7 +31,8 @@
             <h2>PROMO LIFE</h2>
             <div class="col mt-4">
                 <div class="card shadow card-total">                
-                    <a name="" id="" class="btn btn-ligth " href="{{route('export.promolife')}}" role="button"> <img src="{{ asset('img/Microsoft_Office_Excel_(2019–present).svg.png') }}" width="50px" height="50px" alt=""></a>
+                    <x-boton-export :href="route('export.promolife')">
+                    </x-boton-export> 
                 </div>
             </div>
             

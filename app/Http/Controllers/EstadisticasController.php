@@ -855,6 +855,7 @@ class EstadisticasController extends Controller
 
     public function tradeMarket57Estadisticas()
     {
+
         
         $areas = ['Administración', 'Almacén', 'Compras', 'Dirección', 'Diseño', 'Importaciones', 'Logística', 'Marketing', 'Operaciones', ' Recursos Humanos', 'Tecnología', 'Ventas'];
         $edades = ['18-25', '26-35', '36-45', '46-55', '56-65', '65+'];
@@ -1084,7 +1085,7 @@ class EstadisticasController extends Controller
 
 
 
-        return view('Estadisticas.estadisticasTradeMarket57',compact(
+        return view('Estadisticas.estadisticasTradeMartek57',compact(
         'edades', 
         'areas'  ,
         'tiempos',
@@ -1130,7 +1131,7 @@ class EstadisticasController extends Controller
         'Resultado145',
         'Resultado146',
         'Resultado147',
-    ));
+         ));
     }
 
 }

@@ -15,4 +15,9 @@ class Answers extends Model
         'uuid',
         'company'
     ];
+
+    public function question()
+    {
+        return $this->belongsTo(Questions::class);
+    }
 }

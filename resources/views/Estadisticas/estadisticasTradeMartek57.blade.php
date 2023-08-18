@@ -25,13 +25,14 @@
             </div>
         </div>
     </div>
-     {{-- promo life --}}
+     {{-- BH TRADE MARKET 57 --}}
      <div class="container mt-2">
         <div class="row justify-content-center">
-            <h2>PROMO LIFE</h2>
+            <h2>BH TRADE MARKET 57</h2>
             <div class="col mt-4">
                 <div class="card shadow card-total">                
-                    <a name="" id="" class="btn btn-ligth " href="{{route('export.promolife')}}" role="button"> <img src="{{ asset('img/Microsoft_Office_Excel_(2019–present).svg.png') }}" width="50px" height="50px" alt=""></a>
+                    <x-boton-export :href="route('export.trademarket')">
+                    </x-boton-export> 
                 </div>
             </div>
             
@@ -57,14 +58,14 @@
             </div>
             <div class="col ">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">Al ingresar a trabajar en PROMO LIFE o cuando has cambiado de posición ¿Fue difícil adaptarte?</h6>
+                    <h6 class="text-center">Al ingresar a trabajar en BH TRADE MARKET 57 o cuando has cambiado de posición ¿Fue difícil adaptarte?</h6>
                 </div>
                 <canvas id="117" height="200"></canvas>
             </div>
                           
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Cómo calificarías tu experiencia trabajando dentro de PROMO LIFE? (Tomando en cuenta que en tu trabajo pasas la mayor parte de tu vida, aprendes cosas nuevas y te llevas experiencias para toda la vida)</h6>
+                    <h6 class="text-center">¿Cómo calificarías tu experiencia trabajando dentro de BH TRADE MARKET 57? (Tomando en cuenta que en tu trabajo pasas la mayor parte de tu vida, aprendes cosas nuevas y te llevas experiencias para toda la vida)</h6>
                 </div>
                 <canvas id="120" height="200"></canvas>
             </div>
@@ -86,7 +87,7 @@
     
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Crees que PROMO LIFE te brinda las herramientas necesarias para desenvolver tus actividades con facilidad?</h6>
+                    <h6 class="text-center">¿Crees que BH TRADE MARKET 57 te brinda las herramientas necesarias para desenvolver tus actividades con facilidad?</h6>
                 </div>
                 <canvas id="123" height="200"></canvas>
             </div>
@@ -100,13 +101,13 @@
     
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center"> ¿Crees que PROMO LIFE te brinda oportunidades de progresar, crecer y desarrollarte profesionalmente?</h6>
+                    <h6 class="text-center"> ¿Crees que BH TRADE MARKET 57 te brinda oportunidades de progresar, crecer y desarrollarte profesionalmente?</h6>
                 </div>
                 <canvas id="126" height="200"></canvas>
             </div>
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center"> ¿Piensas que PROMO LIFE considera a cada colaborador un factor clave para el éxito de la organización?</h6>
+                    <h6 class="text-center"> ¿Piensas que BH TRADE MARKET 57 considera a cada colaborador un factor clave para el éxito de la organización?</h6>
                 </div>
                 <canvas id="127" height="200"></canvas>
             </div>
@@ -134,7 +135,7 @@
             
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Te ves a ti mismo trabajando en PROMO LIFE dentro de?</h6>
+                    <h6 class="text-center">¿Te ves a ti mismo trabajando en BH TRADE MARKET 57 dentro de?</h6>
                 </div>
                 <canvas id="131" height="200"></canvas>
             </div>
@@ -190,7 +191,7 @@
             </div>
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Te sientes escuchado por la Dirección de PROMO LIFE? </h6>
+                    <h6 class="text-center">¿Te sientes escuchado por la Dirección de BH TRADE MARKET 57? </h6>
                 </div>
                 <canvas id="140" height="200"></canvas>
             </div>
@@ -202,27 +203,27 @@
             </div>
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Conoces la misión y visión de PROMO LIFE?</h6>
+                    <h6 class="text-center">¿Conoces la misión y visión de BH TRADE MARKET 57?</h6>
                 </div>
                 <canvas id="142" height="200"></canvas>
             </div>
     
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Conoces el código de ética de PROMO LIFE?</h6>
+                    <h6 class="text-center">¿Conoces el código de ética de BH TRADE MARKET 57?</h6>
                 </div>
                 <canvas id="143" height="200"></canvas>
             </div>
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Conoces los valores organizacionales de PROMO LIFE?</h6>
+                    <h6 class="text-center">¿Conoces los valores organizacionales de BH TRADE MARKET 57?</h6>
                 </div>
                 <canvas id="144" height="200"></canvas>
             </div>
     
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Conoces la línea de denuncias internas de PROMO LIFE?</h6>
+                    <h6 class="text-center">¿Conoces la línea de denuncias internas de BH TRADE MARKET 57?</h6>
                 </div>
                 <canvas id="145" height="200"></canvas>
             </div>
@@ -245,6 +246,7 @@
 
 
     <script>
+
          document.addEventListener('DOMContentLoaded', function() {
         // Obtén el contexto del canvas
         var ctx = document.getElementById('113').getContext('2d');
@@ -539,7 +541,7 @@
         var ctx = document.getElementById('125').getContext('2d');
 
             var nombres=@json($actividades);
-            var datos = @json($Resultado125);
+            var datos = @json($Resultado124);
 
             var backgroundColors = [];
             var borderColors = [];
@@ -1270,6 +1272,8 @@
                 options: {}
             });
     });
+
+
     </script>
 </body>
 </html>

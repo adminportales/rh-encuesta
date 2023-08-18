@@ -6,6 +6,7 @@ use App\Models\Answers;
 use App\Models\Questions;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Monolog\Handler\IFTTTHandler;
 
 class Respuesta extends Controller
 {
@@ -13,15 +14,14 @@ class Respuesta extends Controller
     //vistas de las encuestas
     public function index()
     {
-        
         $preguntas = Questions::all()->where('company', 'BH TRADE MARKET ');
+        
         return view('welcome', compact('preguntas'));
     }
 
 
     public function finish()
     {
-
         return view('finish');
     }
 
@@ -33,12 +33,19 @@ class Respuesta extends Controller
         $preguntas=Questions::all();
 
         $rules = [];
+
+      
         foreach ($preguntas as $pregunta) {
-            $rules["question_id.{$pregunta->id}.*"] = 'required|max:255';
+
+            if($pregunta->type === "Libre"){
+                $rules["question_id.{$pregunta->id}.*"] = 'max:255';
+            }else{
+                $rules["question_id.{$pregunta->id}.*"] = 'required|max:255';
+            }
+
         }
     
         $request->validate($rules);       
-
         $uuid =  Str::uuid();
         foreach ($respuestas as $preguntaId => $respuesta) {
             $respuestaString = implode(',', $respuesta);

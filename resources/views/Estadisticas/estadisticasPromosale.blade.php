@@ -31,9 +31,8 @@
         <div class="row justify-content-center">
             <h2>PROMO ZALE</h2>
             <div class="col mt-4">
-                <div class="card shadow card-total">                
-                    <a name="" id="" class="btn btn-ligth " href="{{route('export.promolife')}}" role="button"> <img src="{{ asset('img/Microsoft_Office_Excel_(2019–present).svg.png') }}" width="50px" height="50px" alt=""></a>
-                </div>
+              <x-boton-export :href="route('export.promozale')">
+              </x-boton-export>              
             </div>
             
             <div class="col">
@@ -58,14 +57,14 @@
             </div>
             <div class="col ">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">Al ingresar a trabajar en BH TRADE MARKET o cuando has cambiado de posición ¿Fue difícil adaptarte?</h6>
+                    <h6 class="text-center">Al ingresar a trabajar en PROMO ZALE o cuando has cambiado de posición ¿Fue difícil adaptarte?</h6>
                 </div>
                 <canvas id="80" height="200"></canvas>
             </div>
                           
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Cómo calificarías tu experiencia trabajando dentro de BH TRADE MARKET? (Tomando en cuenta que en tu trabajo pasas la mayor parte de tu vida, aprendes cosas nuevas y te llevas experiencias para toda la vida)</h6>
+                    <h6 class="text-center">¿Cómo calificarías tu experiencia trabajando dentro de PROMO ZALE? (Tomando en cuenta que en tu trabajo pasas la mayor parte de tu vida, aprendes cosas nuevas y te llevas experiencias para toda la vida)</h6>
                 </div>
                 <canvas id="83" height="200"></canvas>
             </div>
@@ -87,7 +86,7 @@
     
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Crees que BH TRADE MARKET te brinda las herramientas necesarias para desenvolver tus actividades con facilidad?</h6>
+                    <h6 class="text-center">¿Crees que PROMO ZALE te brinda las herramientas necesarias para desenvolver tus actividades con facilidad?</h6>
                 </div>
                 <canvas id="86" height="200"></canvas>
             </div>
@@ -101,13 +100,13 @@
     
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center"> ¿Crees que BH TRADE MARKET te brinda oportunidades de progresar, crecer y desarrollarte profesionalmente?</h6>
+                    <h6 class="text-center"> ¿Crees que PROMO ZALE te brinda oportunidades de progresar, crecer y desarrollarte profesionalmente?</h6>
                 </div>
                 <canvas id="89" height="200"></canvas>
             </div>
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center"> ¿Piensas que BH TRADE MARKET considera a cada colaborador un factor clave para el éxito de la organización?</h6>
+                    <h6 class="text-center"> ¿Piensas que PROMO ZALE considera a cada colaborador un factor clave para el éxito de la organización?</h6>
                 </div>
                 <canvas id="90" height="200"></canvas>
             </div>
@@ -135,7 +134,7 @@
             
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Te ves a ti mismo trabajando en BH TRADE MARKET dentro de?</h6>
+                    <h6 class="text-center">¿Te ves a ti mismo trabajando en PROMO ZALE dentro de?</h6>
                 </div>
                 <canvas id="94" height="200"></canvas>
             </div>
@@ -191,7 +190,7 @@
             </div>
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Te sientes escuchado por la Dirección de BH TRADE MARKET? </h6>
+                    <h6 class="text-center">¿Te sientes escuchado por la Dirección de PROMO ZALE? </h6>
                 </div>
                 <canvas id="103" height="200"></canvas>
             </div>
@@ -203,27 +202,27 @@
             </div>
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Conoces la misión y visión de BH TRADE MARKET?</h6>
+                    <h6 class="text-center">¿Conoces la misión y visión de PROMO ZALE?</h6>
                 </div>
                 <canvas id="105" height="200"></canvas>
             </div>
     
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Conoces el código de ética de BH TRADE MARKET?</h6>
+                    <h6 class="text-center">¿Conoces el código de ética de PROMO ZALE?</h6>
                 </div>
                 <canvas id="106" height="200"></canvas>
             </div>
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Conoces los valores organizacionales de BH TRADE MARKET?</h6>
+                    <h6 class="text-center">¿Conoces los valores organizacionales de PROMO ZALE?</h6>
                 </div>
                 <canvas id="107" height="200"></canvas>
             </div>
     
             <div class="col">
                 <div class="card shadow card-total">
-                    <h6 class="text-center">¿Conoces la línea de denuncias internas de BH TRADE MARKET?</h6>
+                    <h6 class="text-center">¿Conoces la línea de denuncias internas de PROMO ZALE?</h6>
                 </div>
                 <canvas id="108" height="200"></canvas>
             </div>

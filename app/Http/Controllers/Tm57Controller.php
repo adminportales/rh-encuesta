@@ -27,7 +27,13 @@ class Tm57Controller extends Controller
 
         $rules = [];
         foreach ($preguntas as $pregunta) {
-            $rules["question_id.{$pregunta->id}.*"] = 'required|max:255';
+
+            if($pregunta->type === "Libre"){
+                $rules["question_id.{$pregunta->id}.*"] = 'max:255';
+            }else{
+                $rules["question_id.{$pregunta->id}.*"] = 'required|max:255';
+            }
+
         }
     
         $request->validate($rules); 
